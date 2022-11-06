@@ -19,7 +19,7 @@ In today’s lab, we will explore determining the best fit model both with and w
 - To gain some insights into how results may vary across different methods of phylogenetic analysis.
 
 
-### _Laboratory Exercise 1: Testing for the best model_
+### _Exercise 1: Testing for the best model_
 
 Because we are using molecular data (DNA), we first have to consider which model will be appropriate to use. IQ-TREE determines the best-fit model using the ModelFinder program, which is implemented within IQ-TREE (Kalyaanamoorthy et al., 2017). Models can be specified to IQ-TREE using the -m flag, but you may also specify -m to test for the best model(s) using ModelFinder. For DNA substitution model, IQ-TREE implements all alternative time-reversible substitution models ranging from the simplest Jukes-Cantor model (JC), where all substitutions have the same rate, to the most complex General Time Reversible (GTR) model, where all base substitutions have different rates. Many other models are available, which you can read more about in the documentation: http://www.iqtree.org/doc/Substitution-Models.
 
@@ -71,7 +71,7 @@ Now download the file “Bombus.nex.model.gz,” open it in a text editor, and s
 
 :white_check_mark: __Do AIC and AICc have the same best model as BIC? If not, which model(s) do those metrics favor?__
 
-### _Laboratory Exercise 2: ML Tree Inference_
+### _Exercise 2: ML Tree Inference_
 
 Now that you’ve done some model testing, let’s move to the next step: estimating phylogenetic trees with the ML approach. We will also be doing this step in IQ-TREE.
 
@@ -109,7 +109,7 @@ Follow the same steps to open your Bombus_tree_uf.treefile in FigTree.
 
 :white_check_mark: __How do they compare to the parsimony tree?__
 	
-### _Laboratory Exercise 3: Partitioned Analysis_
+### _Exercise 3: Partitioned Analysis_
 
 Next, let’s try running a partitioned analysis in IQ-TREE (If you use a partitioned analysis, cite Chernomor et al. 2016). Partitioning allows you to use different models for different subsets of your data. In practice, phylogeneticists will often concatenate their sequence alignments (combine all alignments into one big alignment, i.e. supermatrix) and partition this supermatrix by gene, codon position, or some other criteria. You can also partition individual gene alignments, but we will focus on working with concatenated data for this lab.
 
