@@ -148,7 +148,7 @@ iqtree -s Bombus_concat.fasta -spp Bombus_concat_partitions.txt -m MFP+MERGE -bb
 
 Download and open the *.iqtree file. 
 
-:white_check_mark: **How many partitions are optimal? What was/were the best model(s)? Were there difference among AIC, AICc, and BIC (look in your *.model file)?**
+:white_check_mark:  **How many partitions are optimal? What was/were the best model(s)? Were there difference among AIC, AICc, and BIC (look in your *.model file)?**
 
 Next, download the tree file and open it in Figtree. Root the tree on Meliponini, ladderize, and show the bootstrap values as branch labels. Save the tree as LastName_Bombus_concat.pdf.
 
