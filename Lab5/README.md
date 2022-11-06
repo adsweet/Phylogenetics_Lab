@@ -97,21 +97,7 @@ It should only take a few minutes for the analyses to run. After the best-fit mo
 
 IQ-TREE will also write the final trees to Bombus_tree_bs.treefile and Bombus_tree_uf.treefile. Download these files. We will open the files in the program FigTree, a GUI program for viewing and manipulating phylogenetic trees. Search for FigTree on your computer and launch the program. You should see a window like this: 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Figtree image](../Images/figtree_screen.png)
 
 Open your tree files from IQ-TREE with File --> Open. First, open Bombus_tree_bs.treefile. When prompted, type in "bootstrap" to label the values. This tree is technically unrooted (we could have specified an outgroup using the -o flag). Now, on the left hand side, check the box to the left of “Branch Labels” and click on the triangle. Select "bootstrap" to be displayed on the branch labels. You should now see the bootstrap values on the tree. Next, we want to root the tree. Recall that the outgroup is Meliponini. Click on the branch leading to Meliponini and click “Reroot” on the top menu. You can also organize the tree by using either Tree > Increasing Node Order or Decreasing Node Order. This rotates the nodes by node order, which can enhance legibility of the tree. I usually prefer showing branches in increasing order. Another nice feature of FigTree is the flexibility to customize the appearance of your tree. Play around with the options in “Appearance” and font size of Tip Labels and Branch Labels to maximize the clarity of your tree.
 
