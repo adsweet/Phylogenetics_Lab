@@ -1,7 +1,7 @@
-#Laboratory 5
-##Substitution Models and Maximum Likelihood Methods
+# Laboratory 5
+## Substitution Models and Maximum Likelihood Methods
 
-###Introduction
+### Introduction
 
  
 R.A. Fisher
