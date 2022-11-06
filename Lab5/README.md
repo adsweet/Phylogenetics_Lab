@@ -20,7 +20,7 @@ In today’s lab, we will explore determining the best fit model both with and w
 •	To gain some insights into how results may vary across different methods of phylogenetic analysis.
 
 
-Laboratory Exercise 1: Testing for the best model
+#### Laboratory Exercise 1: Testing for the best model
 
 Because we are using molecular data (DNA), we first have to consider which model will be appropriate to use. IQ-TREE determines the best-fit model using the ModelFinder program, which is implemented within IQ-TREE (Kalyaanamoorthy et al., 2017). Models can be specified to IQ-TREE using the -m flag, but you may also specify -m to test for the best model(s) using ModelFinder. For DNA substitution model, IQ-TREE implements all alternative time-reversible substitution models ranging from the simplest Jukes-Cantor model (JC), where all substitutions have the same rate, to the most complex General Time Reversible (GTR) model, where all base substitutions have different rates. Many other models are available, which you can read more about in the documentation: http://www.iqtree.org/doc/Substitution-Models.
 
