@@ -176,15 +176,24 @@ After the run finishes, your should see several files beginning with “RAxML.�
 ### References
 
 Akaike, H.  1974.  A new look at the statistical model identification. IEEE  Trans. Autom. Contr. 19:716-723. 
+
 Chernomor, O., von Haeseler A., Minh B.Q. 2016. Terrace aware data structure for phylogenomic inference from supermatrices. Systematic Biology 65:997-1008.
+
 Edwards, A. W. F. and L. L. Cavalli-Sforza. 1964.  Reconstruction of evolutionary trees.  Pp. 67-76 in: Phenetic and Phylogenetic Classification, V. H. Heywood and J. McNeill, eds., Systematics Association Publ. 6, London,
+
 Felsenstein, J. 1981.  Evolutionary trees from DNA sequences: a maximum likelihood approach. Journal of Molecular Evolution 17: 368-376.
+
 Fisher, R. A.  1912.  On an absolute criterion for fitting frequency curves. Messenger of Mathematics 41: 155-160. 
+
 Fisher, R. A. 1921. On the “probable error” of a coefficient of correlation deduced from a small sample. Metron 1: 3-32. 
+
 Fisher, R. A. 1922. On the mathematical foundations of theoretical statistics. Philosophical Transactions of the Royal Society of London  A 222: 309-368. 
+
 Hoang, D.T., Chernomor O., von Haeseler, Minh B.Q., Vinh L.S. 2018. UFBoot2: Improving the ultrafast bootstrap approximation. Molecular Biology and Evolution 35:518-522.
+
 Kalyaanamoorthy, S., Minh B.Q., Wong T.K.F., von Haeseler A., Jermiin L.S. 2017. ModelFinder: fast model selection for accurate phylogenetic estimates. Nature Methods 14(6): 587-589.
-Neyman, J. 1971.  Molecular studies of evolution: a source of novel statistical problems.  
-	Pp 1-27 in: Statistical Decision Theory and Related Topics, S. S. Gupta and J. Yackel, eds. Academic Press, New York. 
+
+Neyman, J. 1971.  Molecular studies of evolution: a source of novel statistical problems. Pp 1-27 in: Statistical Decision Theory and Related Topics, S. S. Gupta and J. Yackel, eds. Academic Press, New York. 
+
 Nguyen, L.-T., Schmidt H.A., von Haeseler A., Minh B.Q. 2015. IQ-TREE: a fast and effective stochastic algorithm for estimating maximum-likelihood phylogenies. Molecular Biology and Evolution 32(1): 268-274.
 
