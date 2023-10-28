@@ -110,25 +110,25 @@ For any bash command, you can type ```man <command>``` to get the manual page fo
 
 Go through the follow exercise to practice working with the command line on Jetstream. Answer the questions on the separate worksheet document and submit to Blackboard to receive credit for the lab.
 
-First, navigate to your mounted volume directory (probably “/vol_b”).
+First, navigate to your mounted volume directory (probably ```/vol_b```).
 
-Create a new directory called “Lab2”.
+Create a new directory called ```Lab2```.
 
 Throughout the semester, you will be using git commands to access data for the labs. Git commands allow you to download data from my data folder for the course, which is located on GitHub (https://github.com/; a free data depository usually used to make computer code publicly available). 
 
 Once you are in your volume directory, use the following command:
-
+```
 git clone https://github.com/adsweet/A-State_Phylogenetics_Lab.git
-
+````
 You should see a new directory in your volume directory. 
 
 :white_check_mark: __1.	What is the name of this new directory?__
 
-Change into the new directory. You should see a directory called “Lab2.” Now change into this directory. You should see a directory called "Data." Change into the "Data" directory. You should see a file. 
+Change into the new directory. You should see a directory called ```Lab2```. Now change into this directory. You should see a directory called ```Data```. Change into the ```Data``` directory. You should see a file. 
 
 :white_check_mark: __2.	What is the name of the file?__
 
-Now let’s copy this file into your “Lab2” directory. After copying the file, change into your “Lab2” directory. This file is a compressed TAR file (short for “tape archive”), which is basically a type of file that can have multiple files and/or directories compressed inside of it (often referred to as a “tar ball”). To extract the contents, we need to use a “tar” command. Use the following command:
+Now let’s copy this file into your ```Lab2``` directory. After copying the file, change into your ```Lab2``` directory. This file is a compressed TAR file (short for “tape archive”), which is basically a type of file that can have multiple files and/or directories compressed inside of it (often referred to as a “tar ball”). To extract the contents, we need to use a “tar” command. Use the following command:
 
 ```
 tar -xvzf <tar file>
@@ -142,7 +142,7 @@ Next, we want to see what is in the file. There are several commands for this. T
 head <file>
 ```
 
-This will print the first 10 lines of a file. If you want to see more or fewer lines, you can include that number after the command (e.g., “head -5 <file>”).
+This will print the first 10 lines of a file. If you want to see more or fewer lines, you can include that number after the command (e.g., ```head -5 <file>```).
 
 :white_check_mark: __4.	What do you see in the file? Paste the first two lines below.__
 
@@ -176,7 +176,7 @@ This gives you more information about the contents, including the creator (usern
 
 Download your “practice.txt” file to the Desktop using the Jetstream interface. 
 
-Sadly, your new file was not meant to last long. As your final act in this exercise, delete your “practice.txt” file. List the contents of Lab2 to confirm you removed the file.
+Sadly, your new file was not meant to last long. As your final act in this exercise, delete your “practice.txt” file. List the contents of ```Lab2``` to confirm you removed the file.
 
 ## Lab 3.2: NCBI
 
