@@ -83,7 +83,7 @@ For any bash command, you can type ```man <command>``` to get the manual page fo
 
 Go through the follow exercise to practice working with the command line on Jetstream. Answer the questions on the separate worksheet document and submit to Blackboard to receive credit for the lab.
 
-First, navigate to your mounted volume directory (probably ```/vol_b```).
+First, navigate to your mounted volume directory (probably ```media/volume/sdb```).
 
 Create a new directory called ```Lab2```.
 
@@ -91,7 +91,7 @@ Throughout the semester, you will be using git commands to access data for the l
 
 Once you are in your volume directory, use the following command:
 ```
-git clone https://github.com/adsweet/A-State_Phylogenetics_Lab.git
+git clone https://github.com/adsweet/Phylogenetics_Lab.git
 ````
 You should see a new directory in your volume directory. 
 
