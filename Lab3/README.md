@@ -23,7 +23,7 @@ Like in a GUI interface, you use the command line to access files from folders, 
 
 You will often see/hear paths referred to in directions like “up” or “down” (e.g., move up one directory). This is because using directions is a good way to visualize the path structure:
 
-<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/directory.png" width=5% height=5%>
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/directory.png" width=50% height=50%>
 
 Thinking about paths and directories in terms of “up” and “down” also allows for using relative paths (relative to your current working directory). In bash, you can utilize relative paths with the following syntax:
 
