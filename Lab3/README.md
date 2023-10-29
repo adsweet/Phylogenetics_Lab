@@ -11,7 +11,7 @@ First, let’s introduce you to some basics. To begin, log on to Jetstream and a
 
 The bottom line on your shell window should end with an ```$``` or ```#``` followed by a white rectangle:
 
-![Shell prompt image](../Images/dollar1.png)
+![Shell prompt image](../Images/dollar1.png width=30 height=50)
 
 This means your shell is ready to take commands. If you do not see these symbols, then your computer is likely running something or is otherwise not ready to receive commands. To submit a command, type in your command and hit Enter (Return).
 
