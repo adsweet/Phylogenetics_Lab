@@ -3,7 +3,7 @@
 
 ### Introduction
 
-<img src="http://magazine.amstat.org/wp-content/uploads/2018/10/Fisher.jpg" width="200" height="250">
+<img src="http://magazine.amstat.org/wp-content/uploads/2018/10/Fisher.jpg" width=50% height=50%>
 
 _R.A. Fisher_
 
