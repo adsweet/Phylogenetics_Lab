@@ -79,30 +79,6 @@ Creates a blank file
 
 For any bash command, you can type ```man <command>``` to get the manual page for that command. This will give you the basic usage instructions, along with all the possible options (likely more than you would ever use).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### _Excercise 3.1.1_
 
 Go through the follow exercise to practice working with the command line on Jetstream. Answer the questions on the separate worksheet document and submit to Blackboard to receive credit for the lab.
@@ -185,20 +161,7 @@ In this exercise, you will learn how to use several of the tools available from 
 
 To begin, access the NCBI home page by going to this link: https://www.ncbi.nlm.nih.gov/. You should see a page that looks like this:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/Screen%20Shot%202023-10-28%20at%208.58.29%20PM.png" width=50% height=50%>
 
 The top of the page has some useful links under the “Resources” and “How To” menus. The left side of the page lists the resources available. The right sidebar lists some popular resources that are frequently accessed, including PubMed (a literature database) and BLAST (a sequence similarity and alignment tool). The search bar, located in the center top of the page, features a pulldown menu for choosing a specific search database and a form for queries.
 
@@ -206,25 +169,11 @@ The top of the page has some useful links under the “Resources” and “How T
 
 For the first exercise, let’s practice searching for specific sequences on GenBank, one of the databases on NCBI. We are going to search for a nucleotide sequence, so select “Nucleotide” in the pulldown menu. 
 
-
-
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/ncbint.png" width=50% height=50%>
 
 The nucleotide database is extensive, so we want to be very specific about our search, both in terms of the gene of interest and the taxon we are studying. Let’s say we want to find out if a sequence exists for the gene Cytochrome Oxidase Subunit 1 (COI) in the species Zenaida macroura. Type the name of the organism (Zenaida macroura) and the name of the gene (COI). The query will pull up a list of results. You will see an accession number, a description of the sequence, and a variety of other data in this format:
 
-
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/zmac.png" width=50% height=50%>
 
 The first information given is the sequence name.  This has several parts, including the species, voucher number, gene region, gene origin, and whether or not the gene is complete (partial cds stands for partial coding domain sequence). The accession number (HM033982) is listed in the last line. The GI number is a series of digits assigned consecutively to each sequence record processed by NCBI.
 
@@ -244,16 +193,7 @@ You can also easily download data from GenBank in several different file formats
 
 You can download individual sequences by selecting the “Send” pulldown menu in the upper right-hand corner of the window. Select “Complete Record”, with a destination of “File.” You will now be able to select “FASTA” format. This will download the sequence and label data directly to your computer.
 
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/Screen%20Shot%202023-10-28%20at%209.01.12%20PM.png" width=50% height=50%>
 
 Open the file in a text editor. 
 
@@ -261,41 +201,15 @@ Open the file in a text editor.
 
 You can also save multiple records to a single FASTA file. Go back to your search results. You can do this by choosing your search in the Recent Activity field on the right side of the page.     
 
-
-
-
-
-
-
 Choose the last search you performed. This will return you to your search results. You will notice that there are checkboxes next to each item. Click the check boxes of a few items to select them.
 
-
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/zmac2.png" width=50% height=50%>
 
 Now, at the top of the page, there are a series of drop-down menus. On the drop-down menu labeled “Send to,” select “File” and on the pulldown menu labeled Format, select “FASTA.” Sort the sequences by “Default order.” This will save the selected sequences to a single FASTA file. Open that file in a text editor to verify it is correct.
 
 If you’re interested in finding all available data for a particular species (or higher-level taxon), it’s most efficient to search GenBank with the “Taxonomy” tools. In the pull-down menu left of the search bar, select “Taxonomy” and search for “Zenaida macroura.”
 
-
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/zmac3.png" width=50% height=50%>
 
 Click the link for that species. On the right-hand side of the screen, you will see a table called “Entrez records.” This table lists the different NCBI databases and the number of links that exist for “Zenaida macroura.” Clicking on the numbers will take you to a page with links to those data.
 
