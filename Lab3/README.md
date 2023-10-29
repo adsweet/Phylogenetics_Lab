@@ -13,20 +13,17 @@ The bottom line on your shell window should end with an ```$``` or ```#``` follo
 
 <img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/dollar1.png" width=5% height=5%>
 
-This means your shell is ready to take commands. If you do not see these symbols, then your computer is likely running something or is otherwise not ready to receive commands. To submit a command, type in your command and hit Enter (Return).
+This means your shell is ready to take commands. If you do not see these symbols, then your computer is likely running something or is otherwise not ready to receive commands. To submit a command, type in your command and hit ```Enter (Return)```.
 
 ### _Files, directories, and paths_
 
-Like in a GUI interface, you use the command line to access files from folders, subfolders, etc. Folders are often referred to as “directories.” However, in the shell window, you can only be in one location (directory) at a time. Your current location is referred to as a “working directory.” To move around or access files in other directories, you need to specify the path of that file or directory, which is basically a list of directories and subdirectories separated by slashes (/). For example, File X might be located in directory A/A.1/A.1.1. 
+Like in a GUI interface, you use the command line to access files from folders, subfolders, etc. Folders are often referred to as “directories.” However, in the shell window, you can only be in one location (directory) at a time. Your current location is referred to as a “working directory.” To move around or access files in other directories, you need to specify the path of that file or directory, which is basically a list of directories and subdirectories separated by slashes (/). For example, File X might be located in directory ```A/A.1/A.1.1```. 
 
 **Note: Never label your directories or files with spaces in the names. This can make it difficult to type the path in your command line. Instead, label files and directories with underscores (_) or dots (.) to separate words, etc.**
 
 You will often see/hear paths referred to in directions like “up” or “down” (e.g., move up one directory). This is because using directions is a good way to visualize the path structure:
 
-
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/directory.png" width=5% height=5%>
 
 Thinking about paths and directories in terms of “up” and “down” also allows for using relative paths (relative to your current working directory). In bash, you can utilize relative paths with the following syntax:
 
