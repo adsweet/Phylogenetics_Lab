@@ -13,7 +13,7 @@ The bottom line on your shell window should end with an ```$``` or ```#``` follo
 
 <img src="[https://github.com/adsweet/Phylogenetics_Lab/tree/main/Images/dollar.png](https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/dollar1.png)" width=50% height=50%>
 
-![Shell prompt image](../Images/dollar1.png =30x50)
+![Shell prompt image](../Images/dollar1.png?raw=true width=50% height=50%)
 
 This means your shell is ready to take commands. If you do not see these symbols, then your computer is likely running something or is otherwise not ready to receive commands. To submit a command, type in your command and hit Enter (Return).
 
