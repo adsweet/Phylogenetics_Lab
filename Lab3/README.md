@@ -83,7 +83,7 @@ For any bash command, you can type ```man <command>``` to get the manual page fo
 
 Go through the follow exercise to practice working with the command line on Jetstream. Answer the questions on the separate worksheet document and submit to Blackboard to receive credit for the lab.
 
-First, navigate to your mounted volume directory (probably ```media/volume/sdb```).
+First, navigate to your mounted volume directory (probably ```/media/volume/sdb```).
 
 Create a new directory called ```Lab2```.
 
@@ -119,7 +119,7 @@ This will print the first 10 lines of a file. If you want to see more or fewer l
 
 :white_check_mark: __4.	What do you see in the file? Paste the first two lines below.__
 
-For your reference, you can also see the last ten (or last X #) of lines using “tail” instead of “head.” 
+For your reference, you can also see the last ten (or last X #) of lines using the ```tail``` command instead of ```head```. 
 
 :white_check_mark: __5.	Paste the last two lines below.__
 
@@ -207,12 +207,14 @@ Choose the last search you performed. This will return you to your search result
 
 Now, at the top of the page, there are a series of drop-down menus. On the drop-down menu labeled “Send to,” select “File” and on the pulldown menu labeled Format, select “FASTA.” Sort the sequences by “Default order.” This will save the selected sequences to a single FASTA file. Open that file in a text editor to verify it is correct.
 
-If you’re interested in finding all available data for a particular species (or higher-level taxon), it’s most efficient to search GenBank with the “Taxonomy” tools. In the pull-down menu left of the search bar, select “Taxonomy” and search for “Zenaida macroura.”
+If you’re interested in finding all available data for a particular species (or higher-level taxon), it’s most efficient to search GenBank with the “Taxonomy” tools. In the pull-down menu left of the search bar, select “Taxonomy” and search for “Columba livia."
 
 <img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/zmac3.png" width=50% height=50%>
 
-Click the link for that species. On the right-hand side of the screen, you will see a table called “Entrez records.” This table lists the different NCBI databases and the number of links that exist for “Zenaida macroura.” Clicking on the numbers will take you to a page with links to those data.
+Click the link for that species. On the right-hand side of the screen, you will see a table called “Entrez records.” This table lists the different NCBI databases and the number of links that exist for “Columba livia.” Clicking on the numbers will take you to a page with links to those data.
 
-:white_check_mark: __6.	How many genomes are available for _Zenaida macroura_?__
+:white_check_mark: __6.	What is the command name for _Columba livia_?__
 
-:white_check_mark: __7.	How many nucleotide seqences are available for _Zenaida macroura_?__
+:white_check_mark: __7.	How many genomes are available for _Columba livia_?__
+
+:white_check_mark: __8.	How many nucleotide seqences are available for _Columba livia_?__
