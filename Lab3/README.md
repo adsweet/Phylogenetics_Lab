@@ -17,11 +17,11 @@ This means your shell is ready to take commands. If you do not see these symbols
 
 ### _Files, directories, and paths_
 
-Like in a GUI interface, you use the command line to access files from folders, subfolders, etc. Folders are often referred to as “directories.” However, in the shell window, you can only be in one location (directory) at a time. Your current location is referred to as a “working directory.” To move around or access files in other directories, you need to specify the path of that file or directory, which is basically a list of directories and subdirectories separated by slashes (/). For example, File X might be located in directory ```A/A.1/A.1.1```. 
+As in a GUI interface, you use the command line to access files from folders, subfolders, etc. Folders are often referred to as “directories.” However, in the shell window, you can only be in one location (directory) at a time. Your current location is referred to as a “working directory.” To move around or access files in other directories, you need to specify the path of that file or directory, which is basically a list of directories and subdirectories separated by slashes (/). For example, File X might be located in directory ```A/A.1/A.1.1```. 
 
 **Note: Never label your directories or files with spaces in the names. This can make it difficult to type the path in your command line. Instead, label files and directories with underscores (_) or dots (.) to separate words, etc.**
 
-You will often see/hear paths referred to in directions like “up” or “down” (e.g., move up one directory). This is because using directions is a good way to visualize the path structure:
+You will often see paths referred to in directions “up” or “down” (e.g., move up one directory). This is because using these directions is a good way to visualize the path structure:
 
 <img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/directory.png" width=50% height=50%>
 
@@ -37,7 +37,7 @@ Using the above example, if your current working directory is A.1.1, you can acc
 
 In contrast, absolute paths require you to list the entire path starting at the root (the “uppermost” directory). So, to access A.1 from A.1.1 using an absolute path, you would need to reference /A/A.1.
 
-### _Common Bash Commands_
+### _Frequently Used Bash Commands_
 
 Next, let’s cover some basic bash commands. You will likely use these commands the most frequently throughout the course. Read through the different commands and complete this week’s lab by going through the exercise.
 ```
@@ -131,7 +131,7 @@ Open the file by typing:
 nano <file>
 ```
 
-This should print the contents to your screen, along with a cursor (white rectangle) and some commands listed at the bottom of the screen. You can navigate around the file using the arrow keys. Nano also allows you to edit files by typing in characters behind the cursor. Add some text to the first line of the file. Now, exit the file (CTRL + X). You will be asked whether you want to save the file (Y for Yes, N for No). Choose Yes and hit Enter to save. Now check your edited file with “head.”
+This should print the contents to your screen, along with a cursor (white rectangle) and some commands listed at the bottom of the screen. You can navigate around the file using the arrow keys. Nano also allows you to edit files by typing in characters behind the cursor. Add some text to the first line of the file. Now, exit the file by typing ```CTRL + X```. You will be asked whether you want to save the file (```Y``` for Yes, ```N``` for No). Choose Yes and hit Enter to save. Now check your edited file with “head.”
 
 :white_check_mark: __6.	What does your first line now say?__
 
