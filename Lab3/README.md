@@ -85,7 +85,7 @@ Go through the follow exercise to practice working with the command line on Jets
 
 First, navigate to your mounted volume directory (probably ```/media/volume/sdb```).
 
-Create a new directory called ```Lab2```.
+Create a new directory called ```Lab3```.
 
 Throughout the semester, you will be using git commands to access data for the labs. Git commands allow you to download data from my data folder for the course, which is located on GitHub (https://github.com/; a free data depository usually used to make computer code publicly available). 
 
@@ -97,18 +97,18 @@ You should see a new directory in your volume directory.
 
 :white_check_mark: __1.	What is the name of this new directory?__
 
-Change into the new directory. You should see a directory called ```Lab2```. Now change into this directory. You should see a directory called ```Data```. Change into the ```Data``` directory. You should see a file. 
+Change into the new directory. You should see a directory called ```Lab3```. Now change into this directory. You should see a directory called ```Data```. Change into the ```Data``` directory. You should see a file. 
 
 :white_check_mark: __2.	What is the name of the file?__
 
-Now let’s copy this file into your ```Lab2``` directory. After copying the file, change into your ```Lab2``` directory. This file is a compressed TAR file (short for “tape archive”), which is basically a type of file that can have multiple files and/or directories compressed inside of it (often referred to as a “tar ball”). To extract the contents, we need to use a “tar” command. Use the following command:
+Now let’s copy this file into your ```Lab3``` directory. After copying the file, change into your ```Lab3``` directory. This file is a compressed TAR file (short for “tape archive”), which is basically a type of file that can have multiple files and/or directories compressed inside of it (often referred to as a “tar ball”). To extract the contents, we need to use a “tar” command. Use the following command:
 
 ```
 tar -xvzf <tar file>
 ```
 (x = extract, v = verbose, z = unzip, f = file)
 
-:white_check_mark: __3.	What is the name(s) of the new file(s) in the “Lab2” directory?__
+:white_check_mark: __3.	What is the name(s) of the new file(s) in the ```Lab3``` directory?__
 
 Next, we want to see what is in the file. There are several commands for this. To take a peak into the file, use the following command:
 ```
@@ -139,17 +139,17 @@ Finally, let’s practice creating and deleting files. Create a file called “p
 
 :white_check_mark: __7.	What is the first line of your new file? Paste in your assignment.__
 
-List the content of your “Lab2” file, but this time add the “lh” flag to your command:
+List the content of your ```Lab3``` directory, but this time add the ```lh``` flag to your command:
 ```
 ls -lh
 ```
 This gives you more information about the contents, including the creator (username), size (number of bytes (K = KB, M = MB, etc.)), creation/edit date and time, and name. 
 
-:white_check_mark: __8.	How large are the three files in the Lab2 directory?__
+:white_check_mark: __8.	How large are the three files in the Lab3 directory?__
 
 Download your “practice.txt” file to the Desktop using the Jetstream interface. 
 
-Sadly, your new file was not meant to last long. As your final act in this exercise, delete your “practice.txt” file. List the contents of ```Lab2``` to confirm you removed the file.
+Sadly, your new file was not meant to last long. As your final act in this exercise, delete your “practice.txt” file. List the contents of ```Lab3``` to confirm you removed the file.
 
 ## Lab 3.2: NCBI
 
