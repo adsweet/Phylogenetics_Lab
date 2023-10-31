@@ -117,11 +117,11 @@ head <file>
 
 This will print the first 10 lines of a file. If you want to see more or fewer lines, you can include that number after the command (e.g., ```head -5 <file>```).
 
-:white_check_mark: __4.	What do you see in the file? Paste the first two lines below.__
+:white_check_mark: __4.	What do you see in the file? Paste the first two lines in your assignment.__
 
 For your reference, you can also see the last ten (or last X #) of lines using the ```tail``` command instead of ```head```. 
 
-:white_check_mark: __5.	Paste the last two lines below.__
+:white_check_mark: __5.	Paste the last two lines in your assignment.__
 
 You can also use one of several built-in text editors. We will be using nano (because I think it is the easiest to use), but know that there are other options (vim, emacs, etc.).
 
@@ -137,7 +137,7 @@ This should print the contents to your screen, along with a cursor (white rectan
 
 Finally, let’s practice creating and deleting files. Create a file called “practice.txt”. Open the file with nano and add some text. Save the file and view the first few lines with “head.”
 
-:white_check_mark: __7.	What is the first line of your new file? Paste below.__
+:white_check_mark: __7.	What is the first line of your new file? Paste in your assignment.__
 
 List the content of your “Lab2” file, but this time add the “lh” flag to your command:
 ```
@@ -185,7 +185,7 @@ Click on the sequence name to open the record for the sequence, which contains i
 
 You will also be to see taxonomic information for the organism under “Organism.”
 
-:white_check_mark: __3.	What is the taxonomy of this particular organism (copy and paste from the record)?__
+:white_check_mark: __3.	What is the taxonomy of this particular organism (copy and paste from the record into your assignment)?__
 
 :white_check_mark: __4.	What type of animal is it?__
 
