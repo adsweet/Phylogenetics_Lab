@@ -101,7 +101,7 @@ Change into the new directory. You should see a directory called ```Lab3```. Now
 
 :white_check_mark: __2.	What is the name of the file?__
 
-Now let’s copy this file into your ```Lab3``` directory. After copying the file, change into your ```Lab3``` directory. This file is a compressed TAR file (short for “tape archive”), which is basically a type of file that can have multiple files and/or directories compressed inside of it (often referred to as a “tar ball”). To extract the contents, we need to use a “tar” command. Use the following command:
+Now let’s copy this file into your ```Lab3``` directory. After copying the file, change into your ```Lab3``` directory. This file is a compressed TAR file (short for “tape archive”), which is basically a type of file that can have multiple files and/or directories compressed inside of it (often referred to as a “tar ball”). To extract the contents, we need to use a ```tar``` command. Use the following command:
 
 ```
 tar -xvzf <tar file>
