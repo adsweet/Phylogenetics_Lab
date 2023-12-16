@@ -213,7 +213,7 @@ If you’re interested in finding all available data for a particular species (o
 
 Click the link for that species. On the right-hand side of the screen, you will see a table called “Entrez records.” This table lists the different NCBI databases and the number of links that exist for “Columba livia.” Clicking on the numbers will take you to a page with links to those data.
 
-:white_check_mark: __6.	What is the command name for _Columba livia_?__
+:white_check_mark: __6.	What is the common name for _Columba livia_?__
 
 :white_check_mark: __7.	How many genomes are available for _Columba livia_?__
 
