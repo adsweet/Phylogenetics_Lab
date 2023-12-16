@@ -5,7 +5,7 @@
 
 Learning how to use the command line has become a crucial skill in phylogenetics. Many phylogenetics programs can only be run through the command line, so it is important to have at least a basic understanding of the syntax. Many of our labs this semester will rely on using the command line. 
 
-You can think of the command line as a more direct way of interacting with your computer compared to using applications in a Graphical User Interface (GUI). Instead of pointing and clicking on an interactive interface, you will give the computer commands through a program called a shell. There are several types of languages (specific syntax) for using a shell, but the most common one for phylogenetics (and bioinformatics more generally) is called bash (for Bourne Again Shell). Bash was designed for a type of operating system called Unix. For context, Linux and MacOS are two operating systems that use a Unix-like system. Windows uses a system called DOS. 
+You can think of the command line as a more direct way of interacting with your computer compared to using applications in a Graphical User Interface (GUI). Instead of pointing and clicking on an interactive interface, you will give the computer commands through a program called a shell. There are several types of languages (specific syntax) for using a shell, but the most common one for phylogenetics (and bioinformatics more generally) is called bash (for Bourne Again Shell). Bash was designed for a type of operating system called UNIX. For context, Linux and MacOS are two operating systems that use a UNIX-like system. Windows uses a system called DOS. 
 
 First, let’s introduce you to some basics. To begin, log on to Jetstream and access the Web Shell from your instance (VM). 
 
