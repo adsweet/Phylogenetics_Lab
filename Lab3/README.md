@@ -81,7 +81,7 @@ For any bash command, you can type ```man <command>``` to get the manual page fo
 
 ### _Excercise 3.1.1_
 
-Go through the follow exercise to practice working with the command line on Jetstream. Answer the questions on the separate worksheet document and submit to Blackboard to receive credit for the lab.
+Go through the follow exercise to practice working with the command line on Jetstream. Answer the questions on the separate worksheet document and submit to Canvas to receive credit for the lab.
 
 First, navigate to your mounted volume directory (probably ```/media/volume/sdb```).
 
