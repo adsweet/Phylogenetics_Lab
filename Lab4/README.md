@@ -260,13 +260,13 @@ mafft --auto apoid_ef1a.fasta >apoid_ef1a_mafft.fasta
 
 MAFFT has several different algorithms designed for different sizes and types of data sets. When in doubt about which algorithm to use, run MAFFT with the ```--auto``` parameter and the program will choose for you based on your data. 
 
-Which strategy did MAFFT use (look below “Strategy” near the bottom of the terminal screen)?
+:white_check_mark: __Which strategy did MAFFT use (look below “Strategy” near the bottom of the terminal screen)?__
 
 Download all three output files and open them in SeaView.
 
 :white_check_mark: __What differences, if any, are noticeable among these alignments? Note that the name order might be different in different files.__
 
-Now let’s look at a dataset that creates more alignment ambiguities: apoid_28S.fasta. EF-1α, the gene used in the previous analysis, is a nuclear protein-coding gene and the indels occurred exclusively in introns. This new file includes sequences for these taxa based on 28S, a nuclear ribosomal RNA (rRNA) gene, which has multiple repeats across the genome of eukaryotes and evolves more quickly than protein-coding genes for most organisms. The highly variable areas in this gene correspond to loop regions of the 28S secondary structure, as shown in the figure below. Stem regions tend to be more conserved (i.e., less variable)
+Now let’s look at a dataset that creates more alignment ambiguities: apoid_28S.fasta. EF-1α, the gene used in the previous analysis, is a nuclear protein-coding gene and the indels occurred exclusively in introns. This new file includes sequences for these taxa based on _28S_, a nuclear ribosomal RNA (rRNA) gene, which has multiple repeats across the genome of eukaryotes and evolves more quickly than protein-coding genes for most organisms. The highly variable areas in this gene correspond to loop regions of the _28S_ secondary structure, as shown in the figure below. Stem regions tend to be more conserved (i.e., less variable)
 
 
 
@@ -275,7 +275,7 @@ Now let’s look at a dataset that creates more alignment ambiguities: apoid_28S
 
 
 
-Align these 28S sequences using the default parameters in MUSCLE:
+Align these _28S_ sequences using the default parameters in MUSCLE:
 
 ```
 muscle -in apoid_28S.fasta -out apoid_28S_muscle.fasta
