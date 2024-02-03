@@ -330,9 +330,3 @@ Repeat this analysis for the MUSCLE alignment with custom parameters and for the
 ### References
 
 Gouy, M., S. Guindon, and O. Gascuel. 2010. SeaView version 4: a multiplatform graphical user interface for sequence alignment and phylogenetic tree building. Molecular Biology and Evolution. 27: 221-224.
-
-Lipman, D.J. and W.R. Pearson. 1985. Rapid and sensitive similarity searches. Science. 227: 1435-1441.
-
-Sanger, F., S. Nicklen, and A.R. Coulson. 1977. DNA sequencing with chain-terminating inhibitors. PNAS. 74: 5463-5467.
-
-
