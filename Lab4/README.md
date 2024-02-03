@@ -307,7 +307,7 @@ Try running MUSCLE again with parameters of your choice.
 
 :white_check_mark: __What were your parameters?__
 
-**_Impact of Alignment on Phylogeny_**
+**Impact of Alignment on Phylogeny**
 
 We’ve seen that different alignment programs or parameters can produce different alignments from the same sequence data, but do these differences really impact phylogenetic inference? Let’s run some tests to find out.
 
