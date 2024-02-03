@@ -1,7 +1,7 @@
 # Laboratory 4
 ## Sequence data and multiple sequence alignment
 
-## Introduction
+### Introduction
 
 To this point in the course, you have been primarily estimating phylogenetic trees using morphological data. Although morphology is still used in phylogenetics, the majority of studies now rely on molecular sequence data (either nucleotides or amino acids) to estimate trees. This has become particularly true in the “genomic era,” because researchers can use millions of nucleotide or amino acid characters for their analyses. However, regardless if you are using a single gene with a few hundred characters or thousands of genes with millions of characters, there are several steps that need to happen before you can use proceed with a phylogenetic analysis. First, it is important to established that you are comparing homologous sequences, which we partly covered in last week’s lab on GenBank. A second important step is the multiple sequence alignment (MSA). This step ensures that you are not only comparing homologous genes, but that you are comparing homologous sites within a gene. Today, you will become more familiar with sequence data, including different file types and software for viewing sequences. You will then be introduced to multiple sequence alignment. 
 
