@@ -47,7 +47,7 @@ Most phylogenetics programs that use FASTA files are fine with either type of fo
 
 Next, let’s introduce you to viewing sequence files in a more informative interface. We will use the GUI program SeaView. 
 
-_SeaView_
+***_SeaView_***
 
 [SeaView](https://doua.prabi.fr/software/seaview) (Gouy et al. 2010) is a free program for viewing and editing molecular sequence (DNA or protein) data. It also allows you to do multiple sequence alignments (Part 2 of this lab) and phylogenetic tree building, but in this course we will primarily use it to view/edit sequence data. In today’s lab, you will get familiar with some of the basic features.
 
@@ -75,7 +75,11 @@ Take a few minutes to get familiar with these options. You can save the file (Fi
 
 After becoming familiar with SeaView, let’s use it to introduce you to a few other types of sequence files.
 
-First, let’s look at NEXUS files, which you should be familiar with from using PAUP*. Save your FASTA file as a NEXUS by selecting File -> Save as… and then select “NEXUS (*.nxs)” under the “Save As:” options. Save the file as LastName_cox1_nexus.nex. NEXUS files usually have the extension .nex or .nxs. Open the new NEXUS file in a text editor. The first line should say “#NEXUS” followed by some information about your data.
+First, let’s look at NEXUS files, which you should be familiar with from using PAUP*. Save your FASTA file as a NEXUS by selecting File -> Save as… and then select “NEXUS (*.nxs)” under the “Save As:” options. 
+
+:white_check_mark: __Save the file as LastName_cox1_nexus.nex.__
+
+NEXUS files usually have the extension .nex or .nxs. Open the new NEXUS file in a text editor. The first line should say “#NEXUS” followed by some information about your data.
 
 :white_check_mark: __How many taxa (NTAX) are in your file? Characters (NCHAR)? What is the data type?__
 
@@ -85,7 +89,11 @@ One of the key characteristics of a NEXUS file are data blocks in the “BEGIN�
 
 Finally, let’s introduce you to PHYLIP files. The PHYLIP format was originally introduced by Joe Felsenstein for his software program PHYLIP (surprise!), which was one of the first computer programs for inferring phylogenetic trees. PHYLIP (the program) is not used as frequently anymore, but the associated file format is still used by many different software programs. 
 
-Go back to your sequence file (either FASTA or NEXUS) in SeaView and convert it to PHYLIP by selecting File -> Save as… and choosing “Phylip (*.phy).” Save the file as LastName_cox1_phylip.phy. Phylip files almost always use the extension .phy. Open the new PHYLIP file in a text editor. You should see something that looks like this:
+Go back to your sequence file (either FASTA or NEXUS) in SeaView and convert it to PHYLIP by selecting File -> Save as… and choosing “Phylip (*.phy).” 
+
+:white_check_mark: __Save the file as LastName_cox1_phylip.phy.__
+
+Phylip files usually have the extension .phy. Open the new PHYLIP file in a text editor. You should see something that looks like this:
 
 
 
@@ -100,7 +108,6 @@ Go back to your sequence file (either FASTA or NEXUS) in SeaView and convert it 
 
 
 The top of a PHYLIP file should have two numbers: the number of taxa (19 in this case) and the number of characters (420). The data starts in the second line with the taxon name followed by the sequence data. Note that PHYLIP files can also have several different formats. Like with FASTA files, there are “interleaved” and “sequential” PHYLIP files. There are also “strict” and “relaxed” PHYLIP files. The strict format only allows a maximum of 10 characters in your taxon names , whereas there is no limitation in the relaxed format. SeaView saves PHYLIP in the interleaved, relaxed format.
-
 
 ### Exercise 4.2: Multiple Sequence Alignment
 
