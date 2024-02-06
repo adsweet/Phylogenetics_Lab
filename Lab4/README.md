@@ -37,7 +37,7 @@ Once you have extracted your files, let’s start by becoming familiar with a fe
 
 First, download the file “claravinae_cox1.fasta” and open it in a text editor. This is a FASTA file, which you should be familiar with from previous labs.
 
-Describe the basic structure of this file. 
+:white_check_mark: __Describe the basic structure of this file.__
 
 Next, download and open the file “apoid_28S_interleaved.fasta.” This is also a FASTA file, but is in the “interleaved” format (the previous file was a “sequential” FASTA file). Note that FASTA files usually have the extensions .fasta, .fa, or .fst.
 
@@ -283,6 +283,7 @@ Download the output file and open it in SeaView.
 Try running MUSCLE again with parameters of your choice.
 
 :white_check_mark: __What were your parameters?__
+
 
 **Impact of Alignment on Phylogeny**
 
