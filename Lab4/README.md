@@ -306,8 +306,11 @@ Repeat this analysis for the MUSCLE alignment with custom parameters and for the
 
 ### Some other MSA software
 [PASTA](https://github.com/smirarab/pasta)
+
 [PRANK](https://github.com/ariloytynoja/prank-msa/tree/master)
+
 [UPP](https://github.com/smirarab/sepp/tree/master)
+
 [T-Coffee](https://tcoffee.org/Projects/tcoffee/index.html)
 
 ### References
