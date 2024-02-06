@@ -202,7 +202,7 @@ In the above examples, we considered only short sequences and two taxa. In reali
 Based on many studies, the programs [MAFFT](https://mafft.cbrc.jp/alignment/software/algorithms/algorithms.html) (Multiple Alignment using Fast 
 Fourier Transform has both progressive and iterative alignment capabilities) and [MUSCLE](https://www.drive5.com/muscle/) (an iterative alignment) are relatively accurate. Another widely used program is Clustal. Clustal is updated frequently and they have a new MSA program, [Clustal Omega](http://clustal.org/omega/). Omega uses HMM (hidden Markov Model) analysis. We will discuss Markov processes when we discuss Bayesian methods of phylogenetic analysis later in the semester.
 
-We will explore all three programs today and compare the resulting alignments. Although MUSCLE, MAFFT, and Clustal-Omega can also align amino acid data, other programs exist specifically for the alignment of amino acid data (and thus usually perform better), including PROBCONS, but we will not talk about these programs today.
+We will explore all three programs today and compare the resulting alignments. Although MUSCLE, MAFFT, and Clustal-Omega can also align amino acid data, other programs exist specifically for the alignment of amino acid data (and thus usually perform better), including [PROBCONS](http://probcons.stanford.edu/), but we will not talk about these programs today.
 
 In Clustal alignments, all sequences are compared to each other using pairwise alignments, which are used to construct a neighbor-joining distance phylogeny. The phylogeny is then used as a guide for subsequent multiple sequence alignment, with the most closely related taxa aligned first.
 
@@ -303,6 +303,12 @@ Repeat this analysis for the MUSCLE alignment with custom parameters and for the
 :white_check_mark: __Are there any well-supported differences (bootstrap support >75)?__
 
 :white_check_mark: __Based on your findings, which alignment algorithms produce the most similar trees?__
+
+### Some other MSA software
+[PASTA](https://github.com/smirarab/pasta)
+[PRANK](https://github.com/ariloytynoja/prank-msa/tree/master)
+[UPP](https://github.com/smirarab/sepp/tree/master)
+[T-Coffee](https://tcoffee.org/Projects/tcoffee/index.html)
 
 ### References
 
