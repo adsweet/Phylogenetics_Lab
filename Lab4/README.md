@@ -168,7 +168,7 @@ In the next example, the final cost is still 5 [3(1) + 2(1) = 5].  (The three su
 
 ```
 ACTTCCGAATTTGGCT
-|||*    *||| |*|| 
+|||*   *||| |*|| 
 ACTC---GATT-GCCT
 ```
 
