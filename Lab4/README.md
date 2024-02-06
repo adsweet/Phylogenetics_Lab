@@ -144,7 +144,7 @@ ACTTCCGAATTTGGCT
 ACTC----GATTGCCT
 ```
 
-Which one is correct? In the first example, the alignment was done in a manner that would minimize base substitutions. In the second example, the alignment was done in a manner that would balance the number of insertions and deletions (INDELS ) with the number of base substitutions (indicated by asterisks). In the third example, the alignment was done to minimize INDELS.
+Which one is correct? In the first example, the alignment was done in a manner that would minimize base substitutions. In the second example, the alignment was done in a manner that would balance the number of insertions and deletions (INDELS) with the number of base substitutions (indicated by asterisks). In the third example, the alignment was done to minimize INDELS.
 
 The problems with by-eye (or manual) alignment are:
 
