@@ -282,7 +282,7 @@ Download the output file and open it in SeaView.
 
 Try running MUSCLE again with parameters of your choice.
 
-:white_check_mark: __What were your parameters?__
+:white_check_mark: __What were your parameters?__  
 
 
 **Impact of Alignment on Phylogeny**
