@@ -193,18 +193,21 @@ The second of these two alignments is preferred because it has the lower cost.
 
 Now, let’s consider the alignment that minimizes gaps. A base substitution costs 1 and opening a gap costs 2. The final cost for each of the three alignments below is given after the alignment.
 
-
+```
 TaxonA	ACTTCCGAATTTG-GCT  	Final cost = 0(1) + 5(2) = 10
            |||  ||| || |  ||
 TaxonB	ACT—-CGA-TT-GC-CT
-
+```
+```
 TaxonA	ACTTCCGAATTTGGCT  	Final cost = 3(1) + 2(2) = 7
            |||*   *||| |*||
 TaxonB	ACTC---GATT-GCCT
-
+```
+```
 TaxonA	ACTTCCGAATTTGGCT  	Final cost = 4(1) + 1(2) = 6
            |||*    **|||*||
 TaxonB	ACTC----GATTGCCT
+```
 
 The last of these three alignments would be preferred based on the assigned costs.
 
