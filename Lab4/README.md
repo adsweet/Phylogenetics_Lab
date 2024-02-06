@@ -53,16 +53,7 @@ Next, let’s introduce you to viewing sequence files in a more informative inte
 
 First, let’s view our sequential file in SeaView. Open up the program, select File -> Open Fasta, and select the “claravinae_cox1.fasta” file. You should see something like this:
 
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/alignment.png" width=50% height=50%>
 
 You are seeing the same information as when you opened the file in a text editor, but now there is more information and editing options for the sequences. Your taxon names are on the left, followed by their DNA sequence. Each base has a unique color. Viewing sequences in this way allows you to quickly assess the content of your data file, which will be very useful for viewing sequence alignments. Here are a few useful tools you can use in SeaView:
 
@@ -95,17 +86,7 @@ Go back to your sequence file (either FASTA or NEXUS) in SeaView and convert it 
 
 Phylip files usually have the extension .phy. Open the new PHYLIP file in a text editor. You should see something that looks like this:
 
-
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/phylip.png" width=50% height=50%>
 
 The top of a PHYLIP file should have two numbers: the number of taxa (19 in this case) and the number of characters (420). The data starts in the second line with the taxon name followed by the sequence data. Note that PHYLIP files can also have several different formats. Like with FASTA files, there are “interleaved” and “sequential” PHYLIP files. There are also “strict” and “relaxed” PHYLIP files. The strict format only allows a maximum of 10 characters in your taxon names , whereas there is no limitation in the relaxed format. SeaView saves PHYLIP in the interleaved, relaxed format.
 
