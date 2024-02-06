@@ -159,17 +159,17 @@ _Algorithmic Methods_
 A cost can be assigned to base substitutions and gaps. Given the cost of a substitution is 1 and the cost of opening a gap (no matter the length) is 1, the final cost of the alignment given below is 5 [0(1) + 5(1) = 5].
 
 ```
-TaxonA	ACTTCCGAATTTG-GCT
-           |||  ||| || |  ||
-TaxonB	ACT—-CGA-TT-GC-CT
+ACTTCCGAATTTG-GCT
+|||  ||| || |  ||
+ACT—-CGA-TT-GC-CT
 ```
 
 In the next example, the final cost is still 5 [3(1) + 2(1) = 5].  (The three substitutions are noted by asterisks.)
 
 ```
-TaxonA	ACTTCCGAATTTGGCT
-           |||*    *||| |*|| 
-TaxonB	ACTC---GATT-GCCT
+ACTTCCGAATTTGGCT
+|||*    *||| |*|| 
+ACTC---GATT-GCCT
 ```
 
 If opening a gap costs the same as a base substitution, all of the disagreements between the two sequences can be explained by insertions and deletions (the first alignment immediately above). However, this comes at the expense of hypothesizing no base substitutions and, thus, eliminates any phylogenetic information that could have been present in those parts of the data.  
@@ -177,16 +177,16 @@ If opening a gap costs the same as a base substitution, all of the disagreements
 Usually, you will want to set the cost of opening a gap to be higher than the cost of a substitution. For example, if the cost of a substitution is 1 and the cost of opening a gap is 2, the final cost of the alignment immediately below will be 10 [0(1) + 5(2) = 10].
 
 ```
-TaxonA	ACTTCCGAATTTG-GCT
-           |||  ||| || |  ||
-TaxonB	ACT—-CGA-TT-GC-CT
+ACTTCCGAATTTG-GCT
+|||  ||| || |  ||
+ACT—-CGA-TT-GC-CT
 ```
 And the cost of the next alignment will be 7 [3(1) + 2(2) =7].
 
 ```
-TaxonA	ACTTCCGAATTTGGCT
-           |||*   *||| |*||
-TaxonB	ACTC---GATT-GCCT
+ACTTCCGAATTTGGCT
+|||*   *||| |*||
+ACTC---GATT-GCCT
 ```
 
 The second of these two alignments is preferred because it has the lower cost.
@@ -194,20 +194,23 @@ The second of these two alignments is preferred because it has the lower cost.
 Now, let’s consider the alignment that minimizes gaps. A base substitution costs 1 and opening a gap costs 2. The final cost for each of the three alignments below is given after the alignment.
 
 ```
-TaxonA	ACTTCCGAATTTG-GCT  	Final cost = 0(1) + 5(2) = 10
-           |||  ||| || |  ||
-TaxonB	ACT—-CGA-TT-GC-CT
+ACTTCCGAATTTG-GCT  	
+|||  ||| || |  ||
+ACT—-CGA-TT-GC-CT
 ```
+Final cost = 0(1) + 5(2) = 10
 ```
-TaxonA	ACTTCCGAATTTGGCT  	Final cost = 3(1) + 2(2) = 7
-           |||*   *||| |*||
-TaxonB	ACTC---GATT-GCCT
+ACTTCCGAATTTGGCT  	
+|||*   *||| |*||
+ACTC---GATT-GCCT
 ```
+Final cost = 3(1) + 2(2) = 7
 ```
-TaxonA	ACTTCCGAATTTGGCT  	Final cost = 4(1) + 1(2) = 6
-           |||*    **|||*||
-TaxonB	ACTC----GATTGCCT
+ACTTCCGAATTTGGCT  	
+|||*    **|||*||
+ACTC----GATTGCCT
 ```
+Final cost = 4(1) + 1(2) = 6
 
 The last of these three alignments would be preferred based on the assigned costs.
 
