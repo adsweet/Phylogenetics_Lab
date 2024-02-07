@@ -309,7 +309,11 @@ Repeat this analysis for the MUSCLE alignment with custom parameters and for the
 [PASTA](https://github.com/smirarab/pasta)  
 [PRANK](https://github.com/ariloytynoja/prank-msa/tree/master)  
 [UPP](https://github.com/smirarab/sepp/tree/master)  
-[T-Coffee](https://tcoffee.org/Projects/tcoffee/index.html)  
+[T-Coffee](https://tcoffee.org/Projects/tcoffee/index.html)
+
+### Other software for viewing and analyzing alignments
+[AliView](https://ormbunkar.se/aliview/)
+[MEGA](https://www.megasoftware.net/)
 
 ### References
 
