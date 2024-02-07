@@ -3,10 +3,6 @@
 
 ### Introduction
 
-<img src="http://magazine.amstat.org/wp-content/uploads/2018/10/Fisher.jpg" width=20% height=20%>
-
-_R.A. Fisher_
-
 Maximum likelihood was first applied to phylogeny estimation by Edwards and Cavalli-Sforza (1964), both students of the great statistician Ronald A. Fisher, who invented likelihood as a statistical method (Fisher 1912, 1921, 1922).  It was not until the work of Joe Felsenstein (Felsenstein 1981), which capitalized on earlier attempts by Jerzy Neyman (1971) and others, that a practical computerized method was found for calculating tree likelihoods from sequences. In the context of molecular phylogenetics, maximum likelihood attempts to find the tree that maximizes the likelihood that the sequence data we observe would have been produced, given a particular evolutionary model that specifies how the sequences are expected to evolve (“substitution models”). The use of an evolutionary model allows the explanation of a dataset in association with a tree to be more complete and precise (thus the trees that maximize the fit should in principle be more accurate).  Hence, model selection is important in maximum likelihood, and model misspecification can lead to an incorrect tree. Furthermore, the model may differ among different subsets of columns, or partitions. Testing whether or not partitions are evolving under similar models is another aspect of selecting the best model. With regard to selecting a realistic model given those that have been developed to date, objective methods using statistical criteria have been introduced. Distance and Bayesian phylogenetic methods also rely on models of sequence evolution, so future labs will continue to focus on model-based inference.
 
 One program in particular, [IQ-TREE](http://www.iqtree.org/)  (Nguyen et al. 2015), was developed to overcome the hurdles associated with large datasets. While model selection, partition finding, and maximum likelihood estimation were previously implemented in separate software, IQ-TREE advances on previous methods by combining all into a single piece of software. 
@@ -19,7 +15,7 @@ In today’s lab, we will explore determining the best fit model both with and w
 - To gain some insights into how results may vary across different methods of phylogenetic analysis.
 
 
-### _Exercise 1: Testing for the best model_
+### _Exercise 5.1: Testing for the best model_
 
 Because we are using molecular data (DNA), we first have to consider which model will be appropriate to use. IQ-TREE determines the best-fit model using the ModelFinder program, which is implemented within IQ-TREE (Kalyaanamoorthy et al., 2017). Models can be specified to IQ-TREE using the -m flag, but you may also specify -m to test for the best model(s) using ModelFinder. For DNA substitution model, IQ-TREE implements all alternative time-reversible substitution models ranging from the simplest Jukes-Cantor model (JC), where all substitutions have the same rate, to the most complex General Time Reversible (GTR) model, where all base substitutions have different rates. Many other models are available, which you can read more about in the documentation: http://www.iqtree.org/doc/Substitution-Models.
 
