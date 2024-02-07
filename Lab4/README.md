@@ -10,7 +10,7 @@ To this point in the course, you have been primarily estimating phylogenetic tre
 By the end of the lab, you should be comfortable with:
 
 - Different types of files associated with genetic data
-- Opening and view sequence data in SeaView
+- Opening and viewing sequence data in SeaView
 - Converting between different types of files
 - Different programs and parameters for multiple sequence alignments
 - How alignment effects phylogenetic inference
