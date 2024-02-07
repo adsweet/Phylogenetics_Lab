@@ -312,7 +312,7 @@ Repeat this analysis for the MUSCLE alignment with custom parameters and for the
 [T-Coffee](https://tcoffee.org/Projects/tcoffee/index.html)
 
 ### Other software for viewing and analyzing alignments
-[AliView](https://ormbunkar.se/aliview/)
+[AliView](https://ormbunkar.se/aliview/)  
 [MEGA](https://www.megasoftware.net/)
 
 ### References
