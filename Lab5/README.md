@@ -91,7 +91,7 @@ It should only take a few minutes for the analyses to run. After the best-fit mo
 
 [^2]: You could also specify the best model from your previous ModelFinder analysis. To do this, you would specify `-m <model>` instead of `-m MFP`.
 
-IQ-TREE will also write the final trees to Bombus_tree_bs.treefile and Bombus_tree_uf.treefile. Download these files. We will open the files in the program FigTree, a GUI program for viewing and manipulating phylogenetic trees. Search for FigTree on your computer and launch the program. You should see a window like this: 
+IQ-TREE will also write the final trees to Bombus_tree_bs.treefile and Bombus_tree_uf.treefile. Download these files. We will open the files in the program [Figtree](https://github.com/rambaut/figtree/releases), a GUI program for viewing and manipulating phylogenetic trees. Search for Figtree on your computer and launch the program. You should see a window like this: 
 
 ![Figtree image](../Images/figtree_screen.png)
 
