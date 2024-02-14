@@ -5,7 +5,7 @@
 
 Maximum likelihood was first applied to phylogeny estimation by Edwards and Cavalli-Sforza (1964), both students of the great statistician Ronald A. Fisher, who invented likelihood as a statistical method (Fisher 1912, 1921, 1922).  It was not until the work of Joe Felsenstein (Felsenstein 1981), which capitalized on earlier attempts by Jerzy Neyman (1971) and others, that a practical computerized method was found for calculating tree likelihoods from sequences. In the context of molecular phylogenetics, maximum likelihood attempts to find the tree that maximizes the likelihood that the sequence data we observe would have been produced, given a particular evolutionary model that specifies how the sequences are expected to evolve (“substitution models”). The use of an evolutionary model allows the explanation of a dataset in association with a tree to be more complete and precise (thus the trees that maximize the fit should in principle be more accurate).  Hence, model selection is important in maximum likelihood, and model misspecification can lead to an incorrect tree. Furthermore, the model may differ among different subsets of columns, or partitions. Testing whether or not partitions are evolving under similar models is another aspect of selecting the best model. With regard to selecting a realistic model given those that have been developed to date, objective methods using statistical criteria have been introduced. Distance and Bayesian phylogenetic methods also rely on models of sequence evolution, so future labs will continue to focus on model-based inference.
 
-One program in particular, [IQ-TREE](http://www.iqtree.org/)  (Nguyen et al. 2015), was developed to overcome the hurdles associated with large datasets. While model selection, partition finding, and maximum likelihood estimation were previously implemented in separate software, IQ-TREE advances on previous methods by combining all into a single piece of software. 
+One program in particular, [IQ-TREE](http://www.iqtree.org/), was developed to overcome the hurdles associated with large datasets. While model selection, partition finding, and maximum likelihood estimation were previously implemented in separate software, IQ-TREE advances on previous methods by combining all into a single piece of software. 
 
 In today’s lab, we will explore determining the best fit model both with and without partitions, maximum likelihood estimation, and ultrafast bootstrapping.
 
@@ -25,17 +25,17 @@ Reversible nucleotide substitution models have three main components:
 2. The base frequencies (e.g. empirical base frequencies, equal base frequencies, or estimated base frequencies)
 3. Rate heterogeneity among sites, indicated by either a gamma parameter that specifies the distribution of rates (+G (gamma) or +R (FreeRate) plus the number of rate categories), or invariant sites (+I) that specifies the proportion of sites that are not changing at all. ModelFinder also reports the type of frequencies (+F is the default for models with unequal frequencies, +FQ for equal frequencies).
 
-To do determine the best model, ModelFinder evaluates the models that best match your data while adjusting for over-fitting to your data. To understand this, consider a bunch of data points in a plot of two variables (right). A line that perfectly explains the data would connect each dot to each other. Yet connecting the dots has no predictive value as to the general trend from which these points are naturally varying, usually represented by a line or curve. ModelFinder will effectively penalize overfitting the model to your data to allow the model to be a better predictor of the actual evolutionary trend. The program does this by testing using two different criteria, the Akaike Information Criteria (AIC) and the Bayesian Information Criteria (BIC) on many different models of sequence evolution. The Akaike information criterion compares the likelihoods of different models and applies a penalty to models that make more assumptions.  The Bayesian information criterion tends to penalize more for overparameterization. 
+To determine the best model, ModelFinder evaluates the models that best match your data while adjusting for over-fitting to your data. To understand this, consider a bunch of data points in a plot of two variables. A line that perfectly explains the data would connect each dot to each other. Yet connecting the dots has no predictive value as to the general trend from which these points are naturally varying, usually represented by a line or curve. ModelFinder will effectively penalize overfitting the model to your data to allow the model to be a better predictor of the actual evolutionary trend. The program does this by testing using two different criteria, the Akaike Information Criteria (AIC) and the Bayesian Information Criteria (BIC) on many different models of sequence evolution. The Akaike information criterion compares the likelihoods of different models and applies a penalty to models that make more assumptions.  The Bayesian information criterion tends to penalize more for overparameterization. 
 
 Now let’s practice searching for optimal models using IQ-Tree.
 
-Logon to your Jetstream account and activate the Web Shell. Create a “Lab5” directory in your mounted volume. Next, navigate to the `A-State_Phylogenetics_Systematics_Data` directory and update the contents with git pull. Copy the content to your “Lab5” directory, change into the “Lab5” directory, and un-tar the file. You should see several files beginning with “Bombus.”
+Logon to your Jetstream account and activate the Web Shell. Create a “Lab5” directory in your mounted volume or in your home directory. Next, navigate to the `A-State_Phylogenetics_Systematics_Data` directory and update the contents with `git pull`. Copy the content to your “Lab5” directory, change into the “Lab5” directory, and  extract the tar file. You should see several files beginning with “Bombus.”
 
-To only run ModelFinder in IQ-TREE, we will call IQ-TREE and specify the “Bombus.nex” file as the sequence file using the `-s` flag. This file contains mitochondrial 16S sequences for 15 species of bumble bees (genus _Bombus_) and one outgroup taxon, a stingless bee (Meliponini). Download the sequence file and open it in SeaView.
+To only run ModelFinder in IQ-TREE, we will call IQ-TREE and specify the “Bombus.nex” file as the sequence file using the `-s` flag. This file contains mitochondrial _16S_ sequences for 15 species of bumble bees (genus _Bombus_) and one outgroup taxon, a stingless bee (from the tribe Meliponini). Download the sequence file and open it in SeaView.
 
 :white_check_mark: __Do the sequences look like they are aligned?__
 
-To tell IQ-TREE to not infer the phylogeny and only find the best model, we will specify the model ```-m``` as ```MF```. By default, IQ-TREE will determine the type of data (e.g. DNA vs. amino acid), but you can specify this as well.
+To tell IQ-TREE not to infer the phylogeny and only find the best model, we will specify the model ```-m``` as ```MF```. By default, IQ-TREE will determine the type of data (e.g. DNA vs. amino acid), but you can specify this as well.
 ```
 iqtree -s Bombus.nex -m MF
 ```
@@ -53,7 +53,7 @@ ModelFinder will test up to 286 DNA models (sample size: 556) ...
 
 The models are grouped in order of decreasing complexity. The last models listed are Jukes-Cantor (JC) models, which assumes that the nucleotides appear in equal frequencies and that transitions and transversions are equally likely. The models get more complex, making more assumptions, as the tests run towards the final model. As the models become more complex, they also include more parameters, including estimated proportion of invariable sites, transition/transversion ratios, gamma shape parameters, and estimated base frequencies. 
 
-The Model column shows the names of the different models. The -LnL shows the negative log-likelihood of the models. Generally, a lower negative log-likelihood (which is actually a “higher” likelihood, since these are already NEGATIVE log-likelihood values) is preferred. df represents the degrees of freedom of the model. You will see the program also estimates and reports AIC, AICc, and BIC scores. AICc corrects for small sample sizes. As you can see, different models are not necessarily the best fit based on different information criteria. By default, IQ-TREE uses BIC to select the best model, but this can be changed by adding the -AIC or -AICc flag.
+The Model column shows the names of the different models. The -LnL shows the negative log-likelihood of the models. Generally, a lower negative log-likelihood (which is actually a “higher” likelihood, since these are already NEGATIVE log-likelihood values) is preferred. df represents the degrees of freedom of the model. You will see the program also estimates and reports AIC, AICc, and BIC scores. AICc corrects for small sample sizes. As you can see, different models are not necessarily the best fit based on different information criteria. By default, IQ-TREE uses BIC to select the best model, but this can be changed by adding the `-AIC` or `-AICc` flag.
 
 By default, IQ-TREE will also create several files, which it notes at the bottom of the standard out, an IQ-TREE report (.iqtree), a treefile in Newick format which is used in fitting the model (IQ-TREE uses a quick parsimony-based method for this), and the log file (which is a file that contains the output that was printed to screen).
 
@@ -95,7 +95,7 @@ IQ-TREE will also write the final trees to Bombus_tree_bs.treefile and Bombus_tr
 
 ![Figtree image](../Images/figtree_screen.png)
 
-Open your tree files from IQ-TREE with File --> Open. First, open Bombus_tree_bs.treefile. When prompted, type in "bootstrap" to label the values. This tree is technically unrooted (we could have specified an outgroup using the -o flag). Now, on the left hand side, check the box to the left of “Branch Labels” and click on the triangle. Select "bootstrap" to be displayed on the branch labels. You should now see the bootstrap values on the tree. Next, we want to root the tree. Recall that the outgroup is Meliponini. Click on the branch leading to Meliponini and click “Reroot” on the top menu. You can also organize the tree by using either Tree > Increasing Node Order or Decreasing Node Order. This rotates the nodes by node order, which can enhance legibility of the tree. I usually prefer showing branches in increasing order. Another nice feature of FigTree is the flexibility to customize the appearance of your tree. Play around with the options in “Appearance” and font size of Tip Labels and Branch Labels to maximize the clarity of your tree.
+Open your tree files from IQ-TREE with File --> Open. First, open the Bombus_tree_bs.treefile. When prompted, type in "bootstrap" to label the values. This tree is technically unrooted (we could have specified an outgroup using the `-o` flag in IQ-TREE). Now, on the left hand side, check the box to the left of “Branch Labels” and click on the triangle. Select "bootstrap" to be displayed on the branch labels. You should now see the bootstrap values on the tree. Next, we want to root the tree. Recall that the outgroup is Meliponini. Click on the branch leading to Meliponini and click “Reroot” on the top menu. You can also organize the tree by using either Tree > Increasing Node Order or Decreasing Node Order. This rotates the nodes by node order, which can enhance legibility of the tree. I usually prefer showing branches in increasing order. Another nice feature of FigTree is the flexibility to customize the appearance of your tree. Play around with the options in “Appearance” and font size of Tip Labels and Branch Labels to maximize the clarity of your tree.
 
 Follow the same steps to open your Bombus_tree_uf.treefile in FigTree. 
 
@@ -107,33 +107,35 @@ Follow the same steps to open your Bombus_tree_uf.treefile in FigTree.
 	
 ### _Exercise 3: Partitioned Analysis_
 
-Next, let’s try running a partitioned analysis in IQ-TREE (If you use a partitioned analysis, cite Chernomor et al. 2016). Partitioning allows you to use different models for different subsets of your data. In practice, phylogeneticists will often concatenate their sequence alignments (combine all alignments into one big alignment, i.e. supermatrix) and partition this supermatrix by gene, codon position, or some other criteria. You can also partition individual gene alignments, but we will focus on working with concatenated data for this lab.
+Next, let’s try running a partitioned analysis in IQ-TREE. Partitioning allows you to use different models for different subsets of your data. In practice, phylogeneticists will often concatenate their sequence alignments (combine all alignments into one big alignment, i.e. supermatrix) and partition this supermatrix by gene, codon position, or some other criteria. You can also partition individual gene alignments, but we will focus on working with concatenated data for this lab.
 
-For this exercise, you will use alignments from two different genes in Bombus: EF-1α (“Bombus_ef1a.phy”) and PEPCK (“Boumbus_pepck.phy”). First, let’s concatenate these alignments. We will use FASconCAT-G for this purpose. This program will look for alignment files in your working directory (based on the filename extension) and concatenate them.  
+For this exercise, you will use alignments from two different genes in Bombus: EF-1α (“Bombus_ef1a.phy”) and PEPCK (“Boumbus_pepck.phy”). First, let’s concatenate these alignments. We will use [AMAS](https://github.com/marekborowiec/AMAS) for this purpose. The AMAS script will look for alignment files in your working directory based on a filename extension and concatenate them.  
 
-Make a new directory (called “concat” or something similar) and copy the two Bombus gene files (“Bombus_ef1a.phy” and “Boumbus_pepck.phy”) into the new directory. Now change into your new directory. To launch FASconCAT-G, run the following command:
-
-```
-fasconcat-g -s -l
-```
-
-When the program finishes running, list your files. You should see several new files beginning with “FcC.” Rename these files:
+Make a new directory (called “concat” or something similar) and copy the two Bombus gene files (“Bombus_ef1a.phy” and “Boumbus_pepck.phy”) into the new directory. Now change into your new directory. To launch AMAS, run the following command:
 
 ```
-mv FcC_supermatrix.fas Bombus_concat.fasta
-mv FcC_supermatrix_partition.txt Bombus_concat_partitions.txt
+amas concat -f phylip -i *.phy -d dna -u fasta --part-format raxml
+```
+This command takes a PHYLIP file of DNA sequences as input, looks for any files ending in .phy, and outputs a concatenated file in FASTA format with a partition file formated for the program RAxML (more on this program in a minute).
+
+When the program finishes running, list your files. You should see two new files: "concatenated.out" and "partitions.txt".
+
+Rename these files by running:
+```
+mv concatenated.out Bombus_concat.fasta
+mv partitions.txt Bombus_concat_partitions.txt
 ```
 
-Download your newly renamed files. Open the FASTA file in Seaview; it should be the combined length of your two gene alignments. Open the text file in a text editor; you should see two lines, both beginning with “DNA,” showing each partition name (in this case the two genes), and the range of sites for each partition.
+Download these files. Open the "concatenated.out" file in Seaview; it should be the combined length of your two gene alignments. Open the "partitions.txt" file in a text editor; you should see two lines, both beginning with “DNA,” showing each partition name (in this case the two genes), and the range of sites for each partition.
 
-Next, we will run IQ-TREE to estimate the best models and a ML tree. In this run, we will use the option “-p,” which will be our partition file. This tells IQ-TREE to 1) determine what the best partitioning scheme should be (Separate models? A single model for both partitions?), tests for the best model(s), and estimates the ML tree under these models. Run the analysis with following command:
+Next, we will run IQ-TREE to estimate the best models and a ML tree. In this run, we will use the option `-p`, which will be our partition file. This tells IQ-TREE to determine what the best partitioning scheme should be (Separate models? A single model for both partitions?) while allowing each partition to have its own rate of evolution, tests for the best model(s), and estimates the ML tree under these models. Run the analysis with following command:
 ```
-iqtree -s Bombus_concat.fasta -spp Bombus_concat_partitions.txt -m MFP+MERGE -bb 1000 -pre Bombus_tree_concat
+iqtree -s Bombus_concat.fasta -p Bombus_concat_partitions.txt -m MFP+MERGE -B 1000 -pre Bombus_tree_concat
 ```
 
-Download and open the *.iqtree file. 
+Download and open the *.iqtree and *.model files. 
 
-:white_check_mark: __How many partitions are optimal? What was/were the best model(s)? Were there difference among AIC, AICc, and BIC (look in your *.model file)?__
+:white_check_mark: __How many partitions are optimal? What were the best model(s)? Were there differences among AIC, AICc, and BIC (look in your *.model file)?__
 
 Next, download the tree file and open it in Figtree. Root the tree on Meliponini, ladderize, and show the bootstrap values as branch labels. 
 
@@ -147,9 +149,11 @@ As a final comparison, let’s run your concatenated alignment in the program RA
 ```
 raxml -s Bombus_concat.fasta -n Bombus_concat_raxml -m GTRGAMMAI -f a -x 1234 -p 4321 -# 200
 ```
-The “-m” option specifies the model, in this case GTR + I + Γ. The “-f a” option specifies a rapid bootstrap test (“-#” is the number of bootstrap replicates), and the “-x” and “-p” are starting seeds (to run the exact same analysis again these numbers would need to be the same in each run, but usually you can put “random” numbers of your choosing. 
+The “-m” option specifies the model, in this case GTR + I + Γ. The “-f a” option specifies a rapid bootstrap test (“-#” is the number of bootstrap replicates), and the “-x” and “-p” are starting seeds (to run the exact same analysis again these numbers would need to be the same in each run, but usually you can put “random” numbers of your choosing). 
 
-After the run finishes, your should see several files beginning with “RAxML.” Download file “RAxML_bipartitions.Bombus_concat_raxml.” This is your tree file, so go ahead and open it Figtree. Make sure to root, ladderize, and show bootstrap values on your tree. Save the tree as LastName_Bombus_concat_raxml.pdf. 
+After the run finishes, your should see several files beginning with “RAxML.” Download file “RAxML_bipartitions.Bombus_concat_raxml.” This is your tree file, so go ahead and open it Figtree. Make sure to root, ladderize, and show bootstrap values on your tree. 
+
+:white_check_mark: __Save the tree as LastName_Bombus_concat_raxml.pdf.__ 
 
 :white_check_mark: __How does this tree compare to the tree from IQ-TREE?__
 
