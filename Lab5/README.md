@@ -67,7 +67,7 @@ Now download the file “Bombus.nex.model.gz,” open it in a text editor, and s
 
 :white_check_mark: __Do AIC and AICc have the same best model as BIC? If not, which model(s) do those metrics favor?__
 
-### _Exercise 2: ML Tree Inference_
+### _Exercise 5.2: ML Tree Inference_
 
 Now that you’ve done some model testing, let’s move to the next step: estimating phylogenetic trees with the ML approach. We will also be doing this step in IQ-TREE.
 
@@ -105,7 +105,7 @@ Follow the same steps to open your Bombus_tree_uf.treefile in FigTree.
 
 :white_check_mark: __How do they compare to the parsimony tree?__
 	
-### _Exercise 3: Partitioned Analysis_
+### _Exercise 5.3: Partitioned Analysis_
 
 Next, let’s try running a partitioned analysis in IQ-TREE. Partitioning allows you to use different models for different subsets of your data. In practice, phylogeneticists will often concatenate their sequence alignments (combine all alignments into one big alignment, i.e. supermatrix) and partition this supermatrix by gene, codon position, or some other criteria. You can also partition individual gene alignments, but we will focus on working with concatenated data for this lab.
 
@@ -145,7 +145,7 @@ Next, download the tree file and open it in Figtree. Root the tree on Meliponini
 
 Keep in mind that it is a good idea to explore the impact of model choice on the results of your own analysis. For example, for your own project data you may wish to see if results differ between the AIC model and BIC model if these criteria differ in model choice, partitioning by codon position for protein-coding genes, etc.
 
-As a final comparison, let’s run your concatenated alignment in the program RAxML, which is another commonly-used ML software. However, RAxML has fewer models compared to IQ-TREE and does not run a model search. We’ll just use a single partition. Run the following command:
+As a final comparison, let’s run your concatenated alignment in the program [RAxML](https://github.com/stamatak/standard-RAxML), which is another commonly-used ML software. However, RAxML has fewer models compared to IQ-TREE and does not run a model search. We’ll just use a single partition. Run the following command:
 ```
 raxml -s Bombus_concat.fasta -n Bombus_concat_raxml -m GTRGAMMAI -f a -x 1234 -p 4321 -# 200
 ```
