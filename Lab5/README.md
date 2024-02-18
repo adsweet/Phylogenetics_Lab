@@ -53,7 +53,9 @@ ModelFinder will test up to 286 DNA models (sample size: 556) ...
 
 The models are grouped in order of decreasing complexity. The last models listed are Jukes-Cantor (JC) models, which assumes that the nucleotides appear in equal frequencies and that transitions and transversions are equally likely. The models get more complex, making more assumptions, as the tests run towards the final model. As the models become more complex, they also include more parameters, including estimated proportion of invariable sites, transition/transversion ratios, gamma shape parameters, and estimated base frequencies. 
 
-The Model column shows the names of the different models. The -LnL shows the negative log-likelihood of the models. Generally, a lower negative log-likelihood (which is actually a “higher” likelihood, since these are already NEGATIVE log-likelihood values) is preferred. df represents the degrees of freedom of the model. You will see the program also estimates and reports AIC, AICc, and BIC scores. AICc corrects for small sample sizes. As you can see, different models are not necessarily the best fit based on different information criteria. By default, IQ-TREE uses BIC to select the best model, but this can be changed by adding the `-AIC` or `-AICc` flag.
+The Model column shows the names of the different models. The -LnL shows the negative log-likelihood of the models. Generally, a lower negative log-likelihood (which is actually a “higher” likelihood, since these are already NEGATIVE log-likelihood values) is preferred. df represents the degrees of freedom of the model. You will see the program also estimates and reports AIC, AICc[^1], and BIC scores. AICc corrects for small sample sizes. As you can see, different models are not necessarily the best fit based on different information criteria. By default, IQ-TREE uses BIC to select the best model, but this can be changed by adding the `-AIC` or `-AICc` flag.
+
+[^1]: AICc is AIC with a correction for small sample sizes. See [Burnham and Anderson (2004)](https://www.uvm.edu/~bmitchel/NR385/Burnham_Multimodel_inference.pdf) for recommendations on when to use AIC vs. AICc.
 
 By default, IQ-TREE will also create several files, which it notes at the bottom of the standard out, an IQ-TREE report (.iqtree), a treefile in Newick format which is used in fitting the model (IQ-TREE uses a quick parsimony-based method for this), and the log file (which is a file that contains the output that was printed to screen).
 
@@ -71,13 +73,15 @@ Now download the file “Bombus.nex.model.gz,” open it in a text editor, and s
 
 Now that you’ve done some model testing, let’s move to the next step: estimating phylogenetic trees with the ML approach. We will also be doing this step in IQ-TREE.
 
-Before running an ML analysis, we should also generate an MP tree for comparions. Launch PAUP*, load in the Bombus.nex file, and run a bootstrapped parsimony analysis using the most appropriate parameters. Obtain a consensus of the resulting trees and save the consensus tree as LastName_parsimony.pdf.
+Before running an ML analysis, we should also generate an MP tree for comparions. Launch PAUP*, load in the Bombus.nex file, and run a bootstrapped parsimony analysis using the most appropriate parameters. 
+
+:white_check_mark: __Obtain a consensus of the resulting trees and save the consensus tree as LastName_parsimony.pdf.__
 
 :white_check_mark: __What conditions did you use for your parsimony analysis?__
 
-Next, let’s run an ML analysis on the same Bombus.nex file. We’re going to run both standard and ultrafast bootstrapping (Hoang et al. 2018). Ultrafast bootstrapping is a different method for assessing node support that is similar to bootstrapping, but is more computationally efficient for large, phylogemic datasets. Practically, the most important thing to note is that the range of ultrafast bootstraps differ, such that values above 95 are considered good support, compared to values above 70 for traditional bootstrapping. We will also specify the ```MFP``` (ModelFinder Plus) for the ```-m``` parameter, which tells IQ-TREE to first search for the best model before running a tree search. We are also setting the prefix this time for all of the output files.[^1]
+Next, let’s run an ML analysis on the same Bombus.nex file. We’re going to run both standard and ultrafast bootstrapping (Hoang et al. 2018). Ultrafast bootstrapping is a different method for assessing node support that is similar to bootstrapping, but is more computationally efficient for large, phylogemic datasets. Practically, the most important thing to note is that the range of ultrafast bootstraps differ, such that values above 95 are considered good support, compared to values above 70 for traditional bootstrapping. We will also specify the ```MFP``` (ModelFinder Plus) for the ```-m``` parameter, which tells IQ-TREE to first search for the best model before running a tree search. We are also setting the prefix this time for all of the output files.[^2]
 
-[^1]: Note that if you try to rerun without specifying the prefix, IQ-TREE will first attempt to use the default (the alignment file name, or the partition file name if a partition file is given). However, since we’ve already used the default filename, IQ-TREE will alert you that the run has already completed and won’t start a new analysis. If you wanted to simply rerun an analysis, you can get overwrite previous files by specifying the `-redo` argument.
+[^2]: Note that if you try to rerun without specifying the prefix, IQ-TREE will first attempt to use the default (the alignment file name, or the partition file name if a partition file is given). However, since we’ve already used the default filename, IQ-TREE will alert you that the run has already completed and won’t start a new analysis. If you wanted to simply rerun an analysis, you can get overwrite previous files by specifying the `-redo` argument.
 
 Traditional bootstrap:
 ```
@@ -87,9 +91,9 @@ Ultrafast bootstrapping:
 ```
 iqtree -s Bombus.nex -m MFP -B 1000 -pre Bombus_tree_uf
 ```
-It should only take a few minutes for the analyses to run. After the best-fit model is selected, IQ-TREE will generate numerous starting trees, pick the best 20, and perform branch-swapping heuristics (Nearest Neighbor Interchange - NNI) to find the maximum likelihood tree.[^2] It will compute the likelihood of trees as it searches through both tree space and parameter space as it tries to optimize the tree. Afterwards, it ends the tree search and optimizes the best-fit model on the best tree, reporting the likelihood of the best tree. Finally, it outputs all of the stats on the run and the analysis files.
+It should only take a few minutes for the analyses to run. After the best-fit model is selected, IQ-TREE will generate numerous starting trees, pick the best 20, and perform branch-swapping heuristics (Nearest Neighbor Interchange - NNI) to find the maximum likelihood tree.[^3] It will compute the likelihood of trees as it searches through both tree space and parameter space as it tries to optimize the tree. Afterwards, it ends the tree search and optimizes the best-fit model on the best tree, reporting the likelihood of the best tree. Finally, it outputs all of the stats on the run and the analysis files.
 
-[^2]: You could also specify the best model from your previous ModelFinder analysis. To do this, you would specify `-m <model>` instead of `-m MFP`.
+[^3]: You could also specify the best model from your previous ModelFinder analysis. To do this, you would specify `-m <model>` instead of `-m MFP`.
 
 IQ-TREE will also write the final trees to Bombus_tree_bs.treefile and Bombus_tree_uf.treefile. Download these files. We will open the files in the program [Figtree](https://github.com/rambaut/figtree/releases), a GUI program for viewing and manipulating phylogenetic trees. Search for Figtree on your computer and launch the program. You should see a window like this: 
 
