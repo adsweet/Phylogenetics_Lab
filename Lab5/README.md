@@ -29,7 +29,7 @@ To determine the best model, ModelFinder evaluates the models that best match yo
 
 Now let’s practice searching for optimal models using IQ-Tree.
 
-Logon to your Jetstream account and activate the Web Shell. Create a “Lab5” directory in your mounted volume or in your home directory. Next, navigate to the `A-State_Phylogenetics_Systematics_Data` directory and update the contents with `git pull`. Copy the content to your “Lab5” directory, change into the “Lab5” directory, and  extract the tar file. You should see several files beginning with “Bombus.”
+Logon to your Jetstream account and activate the Web Shell. Create a “Lab5” directory in your mounted volume or in your home directory. Next, navigate to the `Phylogenetics_Lab` directory and update the contents with `git pull`. Copy the content to your `Lab5` directory, change into the `Lab5` directory, and  extract the tar file. You should see several files beginning with “Bombus.”
 
 To only run ModelFinder in IQ-TREE, we will call IQ-TREE and specify the “Bombus.nex” file as the sequence file using the `-s` flag. This file contains mitochondrial _16S_ sequences for 15 species of bumble bees (genus _Bombus_) and one outgroup taxon, a stingless bee (from the tribe Meliponini). Download the sequence file and open it in SeaView.
 
