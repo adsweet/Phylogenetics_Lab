@@ -113,7 +113,7 @@ Follow the same steps to open your Bombus_tree_uf.treefile in FigTree.
 
 Next, let’s try running a partitioned analysis in IQ-TREE. Partitioning allows you to use different models for different subsets of your data. In practice, phylogeneticists will often concatenate their sequence alignments (combine all alignments into one big alignment, i.e. supermatrix) and partition this supermatrix by gene, codon position, or some other criteria. You can also partition individual gene alignments, but we will focus on working with concatenated data for this lab.
 
-For this exercise, you will use alignments from two different genes in Bombus: EF-1α (“Bombus_ef1a.phy”) and PEPCK (“Boumbus_pepck.phy”). First, let’s concatenate these alignments. We will use [AMAS](https://github.com/marekborowiec/AMAS) for this purpose. The AMAS script will look for alignment files in your working directory based on a filename extension and concatenate them.  
+For this exercise, you will use alignments from two different genes in Bombus: EF-1α (“Bombus_ef1a.phy”) and PEPCK (“Bombus_pepck.phy”). First, let’s concatenate these alignments. We will use [AMAS](https://github.com/marekborowiec/AMAS) for this purpose. The AMAS script will look for alignment files in your working directory based on a filename extension and concatenate them.  
 
 Make a new directory (called “concat” or something similar) and copy the two Bombus gene files (“Bombus_ef1a.phy” and “Boumbus_pepck.phy”) into the new directory. Now change into your new directory. To launch AMAS, run the following command:
 
