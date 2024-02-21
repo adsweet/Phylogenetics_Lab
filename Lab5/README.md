@@ -137,7 +137,7 @@ Next, we will run IQ-TREE to estimate the best models and a ML tree. In this run
 iqtree -s Bombus_concat.fasta -p Bombus_concat_partitions.txt -m MFP+MERGE -B 1000 -pre Bombus_tree_concat
 ```
 
-Download and open the *.iqtree and *.model files. 
+Download and open the *.iqtree and *.model.gz files. 
 
 :white_check_mark: __How many partitions are optimal? What were the best model(s)? Were there differences among AIC, AICc, and BIC (look in your *.model file)?__
 
