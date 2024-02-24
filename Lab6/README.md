@@ -61,13 +61,13 @@ Ok, that was a very (very) brief overview of the basic syntax of R, but let’s 
 
 ### _Exercise 6.1_
 
-Another nice feature of RStudio is that you can also interact with your computer using a terminal window, exactly like you have in previous labs through the Web Shell. In the bottom left window, select the “Terminal” tab. You should see a layout that you are very familiar with from previous labs. You can use bash commands in this window. Change to your mounted volume or home directory and create a new directory called “Lab6.” Next, change to the `Phylogenetics_Lab` directory and update the data with:
+Another nice feature of RStudio is that you can also interact with your computer using a terminal window, exactly like you have in previous labs through the Web Shell. In the bottom left window, select the “Terminal” tab. You should see a layout that you are very familiar with from previous labs. You can use bash commands in this window. Change to your mounted volume or home directory and create a new directory called `Lab6_distance`. Next, change to the `Phylogenetics_Lab` directory and update the data with:
 ```
 git pull
 ```
-You should see a new `Lab6` directory. Change into this directory and copy the file (“Lab6_data.tar.gz”) into your own `Lab6` directory. Move to your `Lab6` directory and extract the files with the command:
+You should see a new `Lab6` directory within `Phylogenetics_Lab`. Change into this `Lab6` directory and copy the file (“Lab6_distance_data.tar.gz”) into your `Lab6_distance` directory. Move to your `Lab6_distance` directory and extract the files with the command:
 ```
-tar -xvzf Lab6_data.tar.gz
+tar -xvzf Lab6_distance_data.tar.gz
 ```
 You should see two new files in your `Lab6` directory. Download the file “beetle_cox1.fasta” and open it in SeaView. These data are mitochondrial sequences (from the _cox1_ gene) from several species of beetles, including several sequences that were obtained from specimens that are thousands of years old (the oldest over 44,000 years old)! The specimens were preserved in packrat middens in California and Mexico (Smith et al. 2021). Do these sequences need to be aligned? If so, align it using MAFFT or MUSCLE. Name your aligned file “beetle_cox1_aligned.fasta”.
 
