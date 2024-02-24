@@ -185,7 +185,7 @@ library(phangorn)
 
 :white_check_mark: __Describe the main differences between the NJ and UPGMA trees.__
  
-References
+### References
 
 Gascuel, O. 1997. BIONJ: an improved version of the NJ algorithm based on a simple model of sequence data. Molecular Biology and Evolution. 14: 685-695.  
 
