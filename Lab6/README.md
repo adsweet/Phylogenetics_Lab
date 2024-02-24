@@ -55,7 +55,7 @@ Notice that we put the word “practice” in quotes. When you’re working in R
 ```
 m <- mean(c(10,30,40))
 ```
-This is calling a command (`mean`) to calculate the average of the numbers 10, 30, and 40. The `c` is needed when you want to run a command on a combined set. Now, go to the console (bottom left), type m, and hit Enter. You should see a number printed to your console screen.
+This is calling a command (`mean()`) to calculate the average of the numbers 10, 30, and 40. The `c` is needed when you want to run a command on a combined set. Now, go to the console (bottom left), type m, and hit Enter. You should see a number printed to your console screen.
 
 Ok, that was a very (very) brief overview of the basic syntax of R, but let’s try to apply some of this syntax to phylogenetic analysis, specifically for distance methods. 
 
