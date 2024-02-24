@@ -25,7 +25,7 @@ Today, distance methods are used in several contexts:
 In this lab you will:
 - Be introduced to the basics of R
 - Be introduced to using R for phylogenetic analysis
-- Become familiar with running neighbor joining and UPGMA distance analyses
+- Become familiar with running neighbor joining and UPGMA distance methods
 
 ### Phylogenetics in R
 
