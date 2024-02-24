@@ -3,7 +3,7 @@
 
 ### Introduction
 
-The philosophy of phenetics (creating classifications based on overall similarity) has fallen out of favor in systematics, but some of the phylogenetic reconstruction methods used involving distance or similarity have persisted. Distance methods have an advantage over parsimony methods in some molecular contexts in that they allow the incorporation of statistical models of sequence evolution. Distance methods are very fast and can be used to analyze extremely large data sets in a reasonable period of time. The disadvantage of distance methods is that, depending on the choice of method, they can be significantly less accurate than parsimony, likelihood, and Bayesian methods in estimating the correct phylogeny. Also, because these methods convert character data into distance data, they are not useful to study character evolution.
+The approach of phenetics (creating classifications based on overall similarity) has fallen out of favor in systematics, but some of the phylogenetic reconstruction methods used involving distance or similarity have persisted. Distance methods have an advantage over parsimony methods in some molecular contexts in that they allow the incorporation of statistical models of sequence evolution. Distance methods are very fast and can be used to analyze extremely large data sets in a reasonable period of time. The disadvantage of distance methods is that, depending on the choice of method, they can be significantly less accurate than parsimony, likelihood, and Bayesian methods in estimating the correct phylogeny. Also, because these methods convert character data into distance data, they are not useful to study character evolution.
 
 Today, distance methods are used in several contexts:
 
