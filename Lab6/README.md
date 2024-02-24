@@ -161,7 +161,7 @@ Convert the file to a NEXUS, execute it in PAUP*, and run a heuristic search wit
 
 :white_check_mark: __How long did the MP analysis take (or did it even finish)?__
 
-Next, run a Maximum Likelihood analysis on the bee alignment in IQ-TREE with 100 ultrafast bootstrap replicates.
+Next, run a Maximum Likelihood analysis on the bee alignment in IQ-Tree with 1,000 ultrafast bootstrap replicates. Be sure to search for the best model. 
 
 :white_check_mark: __How long did the ML analysis take?__
 
@@ -181,7 +181,7 @@ library(phangorn)
 ```
 :white_check_mark: __Root your tree on “Maset,” ladderize, plot, and save as a PDF (LastName_beetles_UPGMA.pdf).__
 
-:white_check_mark: __How does this tree compare to the MP and ML trees?__
+:white_check_mark: __How does the UPGMA tree compare to the MP and ML trees?__
 
 :white_check_mark: __Describe the main differences between the NJ and UPGMA trees.__
  
