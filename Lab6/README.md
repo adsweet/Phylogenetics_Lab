@@ -41,7 +41,7 @@ Notice the “RStudio” link (blue circle with an “R”) at the bottom of you
 
 <img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/rstudio.png" width=50% height=50%>
 
-Your screen should have four distinct sections. If you don’t see the upper-left section, click the green plus symbol in the upper left or go to File -> New File -> R Script. Here are brief descriptions of these sections, moving from the upper left: 1) A text file for writing/saving your code. You can run a line of code by clicking the “Run” button above this screen or by hitting CTRL (Command on Mac) + Enter. 2) Your environment variables. This will populate as you run code. 3) Interactive window for viewing plots, help files, etc. 4) Your console/terminal window. This is where you can run your code, either by typing in directly or running from the text window above.
+Your screen should have four distinct sections. If you don’t see the upper-left section, click the green plus symbol in the upper left or go to File -> New File -> R Script. Here are brief descriptions of these sections, moving clockwise from the upper left: 1) A text file for writing/saving your code. You can run a line of code by clicking the “Run” button above this screen or by hitting CTRL (Command on Mac) + Enter. 2) Your environment variables. This will populate as you run code. 3) Interactive window for viewing plots, help files, etc. 4) Your console/terminal window. This is where you can run your code, either by typing in directly or running from the text window above.
 
 As an introduction to the basic syntax of R, we’ll be writing our code in the text window (upper left window). First, type in the following line and hit “Run”:
 ```
