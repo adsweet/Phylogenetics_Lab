@@ -9,8 +9,8 @@ Today, distance methods are used in several contexts:
 
 1.	Neighbor joining (NJ), BIONJ[^1] , and unweighted pair group method with arithmetic mean (UPGMA) [^2] may be applied as a shortcut to obtain a roughly accurate tree. For instance, NJ can be used to obtain a starting tree for parsimony or likelihood analyses, to speed up the search. This basic strategy is also employed in bioinformatics search tools or sequence alignment tools to obtain “guide trees,” because it is fast for large data sets.
 
-[^1] BIONJ is a more recent version of NJ that can be more accurate (Gascuel 1997)
-[^2] UPGMA always produces ultrametric trees (i.e., tip to root length is equal for all tips). It is the simplest distance method (Sokal and Michener 1958)
+[^1]: BIONJ is a more recent version of NJ that can be more accurate (Gascuel 1997)
+[^2]: UPGMA always produces ultrametric trees (i.e., tip to root length is equal for all tips). It is the simplest distance method (Sokal and Michener 1958)
 
 3.	Employing sequence evolution models and converting molecular distances between taxa into estimates of time since divergence (“molecular clock analyses”). Likelihood and Bayesian methods are more appropriately used for this purpose, although they are more computationally intensive. Distance methods that apply “best fit” to the data, such as Fitch-Margoliash, are used in this context. We will talk more about the estimation of divergence times in a later lab.
 
