@@ -1,5 +1,5 @@
 # Laboratory 6
-## R and Distance Methods![image](https://github.com/adsweet/Phylogenetics_Lab/assets/7799421/e4dfc5ca-3c3c-4dd4-8ab7-afde3d3f5628)
+## R and Distance Methods
 
 ### Introduction
 
@@ -7,7 +7,7 @@ The philosophy of phenetics (creating classifications based on overall similarit
 
 Today, distance methods are used in several contexts:
 
-1.	Neighbor joining (NJ), BIONJ[^1] , and unweighted pair group method with arithmetic mean (UPGMA) [^2] may be applied as a shortcut to obtain a roughly accurate tree. For instance, NJ can be used to obtain a starting tree for parsimony or likelihood analyses, to speed up the search. This basic strategy is also employed in bioinformatics search tools or sequence alignment tools to obtain “guide trees,” because it is fast for large data sets.
+1.	Neighbor joining (NJ), BIONJ[^1] , and unweighted pair group method with arithmetic mean (UPGMA)[^2] may be applied as a shortcut to obtain a roughly accurate tree. For instance, NJ can be used to obtain a starting tree for parsimony or likelihood analyses, to speed up the search. This basic strategy is also employed in bioinformatics search tools or sequence alignment tools to obtain “guide trees,” because it is fast for large data sets.
 
 [^1]: BIONJ is a more recent version of NJ that can be more accurate (Gascuel 1997)
 [^2]: UPGMA always produces ultrametric trees (i.e., tip to root length is equal for all tips). It is the simplest distance method (Sokal and Michener 1958)
@@ -20,51 +20,26 @@ Today, distance methods are used in several contexts:
 
 6.	Neighbor joining phylogenies and their corresponding distance matrices are often used for analyses at the species-population interface, where changes are rare and most often occur without homoplasy (making it less necessary to compensate for hidden changes). Here, overall distances can be used as a first line of evidence regarding species boundaries.
 
-In this lab you will become familiar with neighbor joining analyses implemented in the statistics program R. 
+**Objectives**
 
-### Phylogenetic in R
+In this lab you will:
+- Be introduced to the basics of R
+- Be introduced to using R for phylogenetic analysis
+- Become familiar with neighbor joining analyses
 
-First, let’s become more familiar with R. If you have used R before, this section will probably be review for you, but it’s always helpful to practice the basics. R is a environment that is designed for statistical computing (https://www.r-project.org/). R is free for anyone to download and use, allows users to develop their own publicly available “packages” for more specific tasks, and there are many (many!) helpful online resources and tutorials. Because of this, R has quickly become a popular (if not the most popular) statistics program in many scientific fields, including phylogenetics. There are also many packages that allow you to produce high-quality figures, so it is also useful for graphics. 
+### Phylogenetics in R
+
+First, let’s become more familiar with the basics R. If you have used R before, this section will probably be review for you, but it’s always helpful to practice the basics. R is an environment that is designed for statistical computing (https://www.r-project.org/). R is free for anyone to download and use, allows users to develop their own publicly available “packages” for more specific tasks, and there are many (many!) helpful online resources and tutorials. Because of this, R has quickly become a popular (if not the most popular) statistics program in many scientific fields, including phylogenetics. There are also many packages that allow you to produce high-quality figures. 
 
 The only “downside” to R is that it relies on its own syntax (i.e., programming language) to run analyses. There is a little bit of a learning curve to master the syntax, but once you have the basics down, you’ll be well on your way to using R on a regular basis. Let’s begin by going over some of the basic syntax. We’ll be using RStudio (https://www.rstudio.com/), which is a nice GUI program for running R.
 
+First, log on to Jetstream and access your course Instance. Next, launch the Web Desktop. You should see something like this:
 
-
-
-
-
-
-
-
-
-First, log on to Jetstream and access your course VM. Next, launch your Web Desktop. You should see something like this:
-
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/jetstream_desktop.png" width=50% height=50%>
 
 Notice the “RStudio” link (blue circle with an “R”) at the bottom of your screen. Double-click that icon to launch RStudio. You should see a screen like this:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/rstudio.png" width=50% height=50%>
 
 Your screen should have four distinct sections. If you don’t see the upper-left section, click the green plus symbol in the upper left or go to File -> New File -> R Script. Here are brief descriptions of these sections, moving from the upper left: 1) A text file for writing/saving your code. You can run a line of code by clicking the “Run” button above this screen or by hitting CTRL (Command on Mac) + Enter. 2) Your environment variables. This will populate as you run code. 3) Interactive window for viewing plots, help files, etc. 4) Your console/terminal window. This is where you can run your code, either by typing in directly or running from the text window above.
 
