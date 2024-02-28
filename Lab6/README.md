@@ -179,6 +179,11 @@ First, load the R package phangorn:
 ```
 library(phangorn)
 ```
+Then, estimate a UPGMA tree using the following command:
+```
+bee_upgma <- upgma(bee_dist)
+```
+
 :white_check_mark: __Root your tree on “Maset,” ladderize, plot, and save as a PDF (LastName_beetles_UPGMA.pdf).__
 
 :white_check_mark: __How does the UPGMA tree compare to the MP and ML trees?__
