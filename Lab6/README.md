@@ -181,7 +181,7 @@ library(phangorn)
 ```
 Then, estimate a UPGMA tree using the following command:
 ```
-bee_upgma <- upgma(bee_dist)
+bee_upgma <- upgma(beetle_dist_raw)
 ```
 
 :white_check_mark: __Root your tree on “Maset,” ladderize, plot, and save as a PDF (LastName_beetles_UPGMA.pdf).__
