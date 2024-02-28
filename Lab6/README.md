@@ -114,7 +114,7 @@ beetle_dist_raw
 ```
 Now, let’s run the neighbor joining analysis! This will complete very quickly.
 ```
-beetle_nj_raw <- bionj(beetle.dist.raw)
+beetle_nj_raw <- bionj(beetle_dist_raw)
 ```
 Let’s visualize the results:
 ```
