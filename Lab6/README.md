@@ -118,7 +118,7 @@ beetle_nj_raw <- bionj(beetle.dist.raw)
 ```
 Let’s visualize the results:
 ```
-plot(beetle.dist.raw)
+plot(beetle_nj_raw)
 ```
 You might see something is wrong: we did not root the tree. We could export this tree as a Newick (using the `write.tree()` command to write a Newick format file), open it FigTree, and then reroot, but we don’t have to do that since we can root it using APE. We use the outgroup argument to specify our outgroup (we’ll just use “Maset”), and also set `resolve.root = TRUE`. The default is to leave the root in an unresolved trichotomy with the ingroup. We’ll go ahead and ladderize it as well to order the nodes in displaying the tree. We will also add the scale bar so we have a scale bar for the distances on the branch lengths.
 ```
