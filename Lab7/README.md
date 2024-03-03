@@ -21,7 +21,7 @@ Because of the complexity of Bayesian estimation using multiple models, it is no
 3. The following formula, known as the acceptance ratio, is calculated:
 4. 
  ```math
-R = \frac{P(&theta;<sub>j</sub>)P(D|&theta;<sub>j</sub>)}{P(&theta;<sub>i</sub>)P(D|&theta;<sub>i</sub>}
+R = \frac{P(&theta;_j)P(D|&theta;_j)}{P(&theta;_i)P(D|&theta;&theta;_i)}
 ```
 		 
 4. If R \geq 1 then &theta;<sub>j</sub> is accepted
