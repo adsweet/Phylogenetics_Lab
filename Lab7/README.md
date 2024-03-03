@@ -24,7 +24,7 @@ Because of the complexity of Bayesian estimation using multiple models, it is no
 R = \frac{P(&theta;_j)P(D|&theta;_j)}{P(&theta;_i)P(D|&theta;_i)}
 ```
 		 
-4. If R \geq 1 then &theta;<sub>j</sub> is accepted
+4. If R $`\geq 1`$ then &theta;<sub>j</sub> is accepted
 5. If R < 1 then a number is drawn from a uniform distribution (0,1)
 6. If this number is < R then &theta;<sub>j</sub> is accepted
 7. If this number is > R then the Markov chain stays in the same state
