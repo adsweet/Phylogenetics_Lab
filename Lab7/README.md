@@ -36,7 +36,7 @@ Today we will estimate relationships between gall wasps (Cynipidae) and their cl
 **Objectives**
 
 In this lab you will:
-- Be introduced running Bayesian phylogenetic analyses
+- Be introduced to running Bayesian phylogenetic analyses
 - Be introduced to assessing MCMC runs using R and other tools
 
 ### Exercise 7.1
@@ -239,7 +239,7 @@ lset applyto=(4) nst=2 rates=gamma;
 unlink shape=(all) pinvar=(all) statefreq=(all) revmat=(all);
 ```
 
-First, we set up the partition called “data” (it’s defined in the first MrBayes block) using the set command. We forced characters 1, 3, and 5 to be ordered using the `ctype` command. Then we used the `lset` command to assign likelihood models to each molecular character set. This is done using `applyto` and specifying the character set in the order in which they are listed in the partition “data” (e.g. _cox1_ is partition 2, _EF-1&alpha_; is partition 3, etc.). The `unlink` command allows each character set to have its own parameters, free from other character sets, by specifying `all` partitions. Use the `help unlink` command to learn more. 
+First, we set up the partition called “data” (it’s defined in the first MrBayes block) using the set command. We forced characters 1, 3, and 5 to be ordered using the `ctype` command. Then we used the `lset` command to assign likelihood models to each molecular character set. This is done using `applyto` and specifying the character set in the order in which they are listed in the partition “data” (e.g. _cox1_ is partition 2, _EF-1&alpha;_ is partition 3, etc.). The `unlink` command allows each character set to have its own parameters, free from other character sets, by specifying `all` partitions. Use the `help unlink` command to learn more. 
 
 Remember, your file should still have the `mcmcp` command with the MCMC parameters. For now, delete the `mcmc` command. After making these edits, save the file and upload to your `gall_wasp2` folder.
 
