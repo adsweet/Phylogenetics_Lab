@@ -110,11 +110,11 @@ In a typical Bayesian analysis, we want to discard the early samples because the
 
 Open the program [Tracer](https://github.com/beast-dev/tracer/releases/tag/v1.7.2). Click on the "+" sign below the Trace Files window to load your .p file. Make sure you tell the program to look for all types of files, as it defaults to looking for only .log files!
 
-<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/tracer_plus.png" width=50% height=50%>
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/tracer_plus.png" width=25% height=25%>
 
 Load the "gall_wasp.nex.p" file. By default, Tracer sets the burn-in at 10% (1000) of the number of generations. Set this value to 0 to see all of the generations by double-clicking on the value below the Burn-In column. To choose an appropriate burn-in value, we will first click on the Trace tab at the top of the right-hand window.
 
-<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/tracer_load.png" width=50% height=50%>
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/tracer_load.png" width=25% height=25%>
 
 :white_check_mark: __What did you choose as a burn-in?__
 
@@ -122,12 +122,14 @@ Load the "gall_wasp.nex.p" file. By default, Tracer sets the burn-in at 10% (100
 
 You should see that the traces are still steadily increasing, rather than reaching a stable level. This means that we need to run the analysis for longer so that you can better sample the posterior distribution. Because we will be running it for longer, let us now use the non-interactive mode.
 
-To run MrBayes commands in non-interactive mode, we simply need to add the commands to the MrBayes block in a NEXUS file. To modify the Bayes block, open the gall_wasp.nex file in a text editor. Delete the `mcmcp nruns=1` line. To keep things simple we set our first MrBayes analysis to only have one run, but it is a better practice to run multiple runs. The defaul number of runs for MrBayes is 2. After the partition command and before the end of the Bayes block, enter the following lines, or copy and paste them in. Note: Because we are running mrBayes non-interactively, we could directly call mcmc instead of calling mcmcp first.
+To run MrBayes commands in non-interactive mode, we simply need to add the commands to the MrBayes block in a NEXUS file. To modify the Bayes block, open the gall_wasp.nex file in a text editor. Delete the `mcmcp nruns=1` line. To keep things simple we set our first MrBayes analysis to only have one run, but it is a better practice to run multiple runs. The defaul number of runs for MrBayes is 2. After the partition command and before the end of the Bayes block, enter the following lines, or copy and paste them in.
+
 ```
 set partition=default;
 mcmcp ngen=1000000 printfreq=100 samplefreq=500 savebrlens=yes;
 mcmc;
 ```
+
 You’re now ready to run your analysis. 
 
 Note that this run will take about 10 minutes. To ensure you can still work in the terminal (without opening another tab), type the following command in your terminal window to create a screen:
