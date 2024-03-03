@@ -110,14 +110,11 @@ In a typical Bayesian analysis, we want to discard the early samples because the
 
 Open the program [Tracer](https://github.com/beast-dev/tracer/releases/tag/v1.7.2). Click on the "+" sign below the Trace Files window to load your .p file. Make sure you tell the program to look for all types of files, as it defaults to looking for only .log files!
 
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/tracer_plus.png" width=50% height=50%>
 
 Load the "gall_wasp.nex.p" file. By default, Tracer sets the burn-in at 10% (1000) of the number of generations. Set this value to 0 to see all of the generations by double-clicking on the value below the Burn-In column. To choose an appropriate burn-in value, we will first click on the Trace tab at the top of the right-hand window.
 
-
-
- 
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/tracer_load.png" width=50% height=50%>
 
 :white_check_mark: __What did you choose as a burn-in?__
 
@@ -150,21 +147,18 @@ After starting your run, detach from your screen by typing `CTRL + a`, then `d` 
 $ screen -r mrbayes
 ```
 When you are out of your screen, you can list the files in your `Lab7_bayes` directory. Notice there are now two .p and .t files (run1 and run2), because we set the number of runs back to the default in the mcmcp command (nruns=2). Note that MrBayes uses the NEXUS file name by default for all output files.
+
 Once your analysis finishes, download the .p files and take a look at them in Tracer. If you change the Burn-In to 0, you will see the entire posterior distribution. Here, we can see the likelihood values (plotted on the y-axis) vs. the generation number (plotted on the x-axis). The first step will be choosing a rough spot in the distribution as a preliminary burn-in. This will be the point where the graph seems to "level off." I have marked a red line at a rough point in the following example:
 
-
-
-
- 
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/burnin.png" width=50% height=50%>
 
 Estimate the generation number where the graph levels off and type this number into the Burn-In box. The Trace plot will change to reflect this burn-in, and you can then more closely investigate the data to find the appropriate burn-in value. An appropriate burn-in value will produce a roughly randomly distributed pattern across a horizontal line, the so-called “fuzzy caterpillar”. When the appropriate burn-in is selected, the plot will instead look like the following (the grayed out area is part of the burn-in, above right).
 
-
-
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/bayes_tracer.png" width=50% height=50%>
 
 When you believe you have the correct burn-in, click to view the "Estimates" tab. This tab will show you a distribution of the likelihood values. If the burn-in was properly chosen and stationarity has been reached, the plot will converge on a normal distribution (compare this to when you have burn-in set to 0).
+
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/bayes_estimates.png" width=50% height=50%>
 
 In the column on the left-hand side, you can choose to look at other estimated parameters.  For example, specific rates of nucleotide change, base frequencies, and mutation rates may be estimated. The estimates that are present depend on your model. You will also notice a column labeled “ESS.” This is the estimated sample size of the parameter, and is another measure typically used for testing whether stationarity was reached. In general, values above 200 are excellent, and values over 100 are acceptable. If the ESS is below that for any parameter, you may have to run MrBayes for a longer number of generations. Tracer also allows you to compare plots from several independent analyses to determine whether you have converged on the same tree. 
 
@@ -258,121 +252,59 @@ Then, execute the new file:
 execute gall_wasp2.nex
 ```
 
-Once again, add mcmc; (don’t forget the semicolon!) after mcmcp and before the end of the MrBayes block. The mcmc command can also be input in lieu of mcmcp in the mcmcp line of your Bayes block. Reattach to your screen:
+It is a good idea to run the `execute` command before launcing an MCMC run to make sure your file was read correctly.
 
+If all our parameters check out, exit MrBayes, go back to your gall_wasp2.nex, and add the ```mcmc;``` command (don’t forget the semicolon!) below the ```mcmcp``` line. Reattach to your screen:
+```
 screen -r mrbayes
-
+```
 and launch MrBayes
-
+```
 mb gall_wasp2.nex
-
+```
 
 Detach from your screen and wait for the analysis to finish.
 
 While you’re waiting for your MrBayes run to finish, estimate an ML tree using IQTree on the DNA data from the gall wasps (“gall_wasp_dna.fasta” from your data download):
-
+```
 iqtree -s gall_wasp_dna.fasta -m MFP
-
-Open the resulting tree in Figtree and save as LastName_gall_ML.pdf.
+```
+:white_check_mark: __Open the resulting tree in Figtree and save as LastName_gall_ML.pdf.__
 
 Also compute an NJ distance tree in R (remember to set the correct working directory!):
-
+```
 library(ape)
 gall_dna <- read.FASTA("gall_wasp_dna.fasta")
 gall_dist <- dist.dna(gall_dna, model = "K80")
-gall_dist_nj <- nj(gall_dist)
+gall_dist_nj <- bionj(gall_dist)
 gall_dist_nj <- root(gall_dist_nj, "Ibalia", resolve.root = T)
 plot(gall_dist_nj)
+```
+:white_check_mark: __Save the resulting NJ tree as LastName_gall_NJ.pdf.__
 
-Save the resulting NJ tree as LastName_gall_NJ.pdf.
-
-When your MrBayes analysis has finished, download the .p files and examine both in Tracer and plot the ASDSF in RWTY. Once again, notice the estimates for different model parameters from the MCMC runs (including substitution rates, κ, etc.).
+When your MrBayes analysis has finished, download the .p files and examine both in Tracer and plot the ASDSF in `RWTY`. Once again, notice the estimates for different model parameters from the MCMC runs (including substitution rates, κ, etc.).
 
 Remember to set the appropriate working directory (setwd()) before running RWTY.
 
-What is an appropriate burn-in value for this run? 
+:white_check_mark: __What is an appropriate burn-in value for this run?__
 
-Now perform a sumt that incorporates your newly determined burn-in value:
-
+Now perform a sumt that incorporates your newly determined burn-in value. __Remember to delete the ```mcmc``` line from gall_wasp2.nex before executing.__
+```
 mb
-
-MrBayes > execute gall_wasp2.nex
+```
+```
+execute gall_wasp2.nex
 sumt burnin=<input your burn-in here>
+```
 
-DON’T FORGET TO REMOVE THE MCMC LINE FROM GALL_WASP2.NEX BEFORE EXECUTING IN MRBAYES!
+When this is complete you can exit MrBayes by typing `quit`. Open your .con tree file in Figtree and show posterior probabilities (triangle next to Branch Labels, Display: posterior probabilities).
 
-When this is complete you can exit MrBayes by typing quit. Open your .con tree file in Figtree and show posterior probabilities (triangle next to Branch Labels, Display: posterior probabilities) Save this tree as LastName_MRC_Mixed.pdf.
+:white_check_mark: __Save this tree as LastName_MRC_Mixed.pdf.__
 
-
-How do the ML, NJ, and Bayesian trees compare?
+:white_check_mark: __How do the ML, NJ, and Bayesian trees compare?__
 	
 
-
-Laboratory Exercise 3
-
-It is highly recommended that all commands you use for your analysis be specified in your NEXUS file before running your analysis, with the exception of mcmc, since it is good practice to check that your parameters were correctly set before starting a run. All of the commands for MrBayes are described in the Bayes manual (or using the help command). This manual is concise and is essential to read if you are going to be performing analyses in mrBayes for your own research – not just to understand each of the parameters you are entering and their correct usage, but to ensure that you understand the many additional features available to you. 
-
-The following provides further information about commands to input into your NEXUS file for Bayesian analysis:
-
-#NEXUS
-
-begin data;
- dimensions ntax=80 nchar=2938;
- format datatype=mixed(dna:1-1299 1319-2927,standard:1300-1318 2928-2938) interleave     missing=? gap=-;
-  matrix
-  affinis    GGCTTATTGAATA--ATAATTTTAAGTCAATTCTGCCCAATGAT-----… 
-  ardens     GGCTTGATGATA---ATAATTTTAAGTCGAT-CTGCCCAATGAT--T--… 
-  argillace  GGCTTATTGATA---ATAATTTTAGGTCGAT-CTGCCCAATGAT--T--… 
- [most of matrix removed]
-;
-  end;
-
- begin mrbayes;
-            
-    set autoclose=yes;
-    set nowarnings=yes;
-    outgroup mendax;   command to specify outgroup
-    exclude 11-15 45-54 243-288 360-375;   command to exclude characters
-    charset 16S=1-538;
-    charset EF1aexon=539-967 1206-1299;
-    charset EF1aintron=968-1205;
-    charset EF1amorph=1300-1318;
-    charset opsinexon=1319-1537 1634-1892 1975-1998;
-    charset opsinintron=1538-1633 1893-1974;
-    charset ArgKexon=1999-2261 2657-2927;
-    charset ArgKintron=2262-2656;
-    charset ArgKmorph=2928-2938;
-    partition Parts = 9:  16S,EF1aexon,EF1aintron,EF1amorph,opsinexon,opsinintron,
-ArgKexon,ArgKintron,ArgKmorph;  this recognizes a partition “Parts” as that containing each of the listed character sets. The order in which these character sets are listed will correspond to the numbers used in setting the models.
-set partition=Parts;  this sets the partition you just described. You could specify several different ways to partition your data above. The “set partition” command would then put one of the ways of partitioning the data into action. This command is required.
-    lset Applyto=(1,2) Nst=6 Rates=invgamma;  GTR+I+G specifications applied to 16S and EF1aexon
-    lset Applyto=(3) Nst=6 Rates=gamma;   GTR+G
-    lset Applyto=(5) Nst=2 Rates=gamma;   HKY+G **
-    lset Applyto=(6) Nst=6 Rates=equal;   GTR
-    lset Applyto=(7,8) Nst=6 Rates=propinv;   GTR + I
-    prset ratepr=variable;  prset is used to specify various priors. This prior allows the overall rate to vary between partitions and is recommended.
-    unlink shape= (all) pinvar= (all) statefreq= (all) revmat= (all);
-    mcmcp ngen=4000000 printfreq=100 samplefreq=100 nchains=4 savebrlens=yes;          
-  end;
-
-
-
-
-
-
-
-
-
-**Note that the default is to have base frequencies estimated— to enforce equal base frequencies, use prset statefreqpr=fixed(equal). Fixing these is not recommended by the authors of MrBayes, as the program will continually assess the most appropriate values.
-	
-From the data presented here, if you wanted to enforce an HKY + I model to the ArgKintron charset, how would you write your lset line?
-
-What if we were to analyze our dataset using maximum likelihood in a program like IQ-TREE? If you open up the .p file in a text editor you can find the tree generation with the highest likelihood value (easier to do if you import the .p file into a spreadsheet and sort by the likelihood column). For the mixed model analysis, it could be generation 7940, but it should be different for you since the algorithm is stochastic. You can then open the corresponding .t file and search for the tree that was recorded for generation 7940; this approximates the tree you would find in a likelihood analysis.
-
-Two other useful commands include about (tells you briefly what Bayesian analysis is and what the program is designed to do) and manual (writes a .txt file that includes all the commands so that you don’t have to use the help command every time). 
-
- 
-References
+### References
 
 Huelsenbeck, J. P., F. Ronquist, R. Nielsen, and J. P. Bollback.  2001.  Bayesian inference of phylogeny and its impact on evolutionary biology. Science 294: 2310-2314.
 
@@ -385,5 +317,3 @@ Ronquist, F., J. P. Huelsenbeck.  2003.  MrBayes3: Bayesian phylogenetic inferen
 Yang, Z. 2006. Computational Molecular Evolution. Oxford, Oxford University Press.
 
 Yang, Z. and B. Rannala.  1997.  Bayesian phylogenetic inference using DNA sequences: a Markov chain Monte Carlo method.  Molecular Biology and Evolution 14 (7): 717-724.
-![image](https://github.com/adsweet/Phylogenetics_Lab/assets/7799421/b4b91dda-8e1d-4708-86cb-80cff7559d5d)
-
