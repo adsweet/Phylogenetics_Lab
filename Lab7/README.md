@@ -25,9 +25,9 @@ R = \frac{P(&theta;_j)P(D|&theta;_j)}{P(&theta;_i)P(D|&theta;_i)}
 ```
 		 
 4. If R $`\geq 1`$ then &theta;<sub>j</sub> is accepted
-5. If R < 1 then a number is drawn from a uniform distribution (0,1)
-6. If this number is < R then &theta;<sub>j</sub> is accepted
-7. If this number is > R then the Markov chain stays in the same state
+5. If R $`< 1`$ then a number is drawn from a uniform distribution (0,1)
+6. If this number is $`<`$ R then &theta;<sub>j</sub> is accepted
+7. If this number is $`>`$ R then the Markov chain stays in the same state
 
 The MCMC results in many trees of similar likelihood. As implement, Bayesian analyses summarize the relationships found on these trees. The posterior probability for each node is, in practice, representative of how often each relationship occurred in the collection of sampled trees. In principle, the initial trees are discarded (called the "burn-in"), with only the trees that have reached stationarity (convergence) being kept. Stationarity means that the likelihood of the trees stays within a very narrow range for a very long period of time. Multiple runs of Bayesian analyses are usually performed to verify that the best point of stationarity has been reached, because the MCMC algorithm is stochastic (random), and may get stuck in local likelihood peaks.
 
