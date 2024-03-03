@@ -9,7 +9,7 @@ Where did Bayes' theorem come from? Rev. Thomas Bayes was a minister in southern
 
  
 
-Where P(&Theta;|D) is the posterior probability of the hypothesis, represented by &Theta. In phylogenetics, &Theta includes the topology and its associated branch lengths, and the substitution model parameters. Given that we are now working with multiple continuous parameters, the denominator is represented by a complex integral instead of a summation.
+Where P(&theta;|D) is the posterior probability of the hypothesis, represented by &Theta. In phylogenetics, &Theta includes the topology and its associated branch lengths, and the substitution model parameters. Given that we are now working with multiple continuous parameters, the denominator is represented by a complex integral instead of a summation.
 
 P(&Theta) is the prior and P(D|&Theta) is the likelihood function, which you have seen applied in the ML method. An appropriate model (&Theta) needs to be selected to evaluate the likelihood function, and prior distributions need to be chosen for all the parameters in the model. Most often, uniform (flat) priors are used, which place equal weight on all parameter values. Branch length and substitution model parameters often use continuous distributions, such as the uniform or gamma probability distributions.
 
