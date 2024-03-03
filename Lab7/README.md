@@ -1,5 +1,5 @@
 # Laboratory 7
-## Bayesian Inference in Phylogenetic Analyses
+## Bayesian Inference
 
 ### Introduction
 
