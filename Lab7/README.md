@@ -51,7 +51,7 @@ Next, change to the `Phylogenetics_Lab` directory and update the data with:
 git pull
 ```
 
-You should see a new directory in `Phylogenetics_Lab` called `Lab7`. Copy the contents of this directory to your `Lab7_bayes` directory. Change back to your `Lab7_bayes` directory and extract the contents of this file using:
+You should see a new directory in `Phylogenetics_Lab` called `Lab7` which contains another directory called `Data`. Copy the contents of the `Data` directory to your `Lab7_bayes` directory. Change back to your `Lab7_bayes` directory and extract the contents of this file using:
 
 ```
 tar -xvzf Lab7_Bayes_data.tar.gz
