@@ -19,9 +19,9 @@ Because of the complexity of Bayesian estimation using multiple models, it is no
 1. The Markov chain starts at some state &theta;<sub>i</sub> (this could be the initial prior state)
 2. A new state, &theta;<sub>j</sub>, is proposed by taking a draw from a specified probability distribution. This is known as the proposal mechanism
 3. The following formula, known as the acceptance ratio, is calculated:
-4. 
+   
  ```math
-R = \frac{P(&theta;_j)P(D|&theta;_j)}{P(&theta;_i)P(D|&theta;&theta;_i)}
+R = \frac{P(&theta;_j)P(D|&theta;_j)}{P(&theta;_i)P(D|&theta;_i)}
 ```
 		 
 4. If R \geq 1 then &theta;<sub>j</sub> is accepted
