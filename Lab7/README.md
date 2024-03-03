@@ -267,10 +267,8 @@ mb gall_wasp2.nex
 
 Detach from your screen and wait for the analysis to finish.
 
-While you’re waiting for your MrBayes run to finish, estimate an ML tree using IQTree on the DNA data from the gall wasps (“gall_wasp_dna.fasta” from your data download):
-```
-iqtree -s gall_wasp_dna.fasta -m MFP
-```
+While you’re waiting for your MrBayes run to finish, estimate an unpartitioned ML tree using IQ-Tree on the DNA data from the gall wasps (“gall_wasp_dna.fasta” from your data download). Be sure to run a model test and at least 1,000 ultrafast bootstrap replicates.
+
 :white_check_mark: __Open the resulting tree in Figtree and save as LastName_gall_ML.pdf.__
 
 Also compute an NJ distance tree in R (remember to set the correct working directory!):
