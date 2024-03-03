@@ -7,21 +7,23 @@ The idea that we could infer phylogenies by implementing Bayes' theorem was intr
 
 Where did Bayes' theorem come from? Rev. Thomas Bayes was a minister in southern England during the 1700s, and after he retired from the church he focused his efforts on probability theory. In 1763 he developed his famous theorem, above. This has been adapted to phylogenetic inference with the following equation:
 
- 
+ ```math
+P(\theta|D) = \frac{P(D|\theta)P(\theta)}{\intP(\theta)P(D|\theta)d\theta
+```
 
-Where P(&theta;|D) is the posterior probability of the hypothesis, represented by &Theta. In phylogenetics, &Theta includes the topology and its associated branch lengths, and the substitution model parameters. Given that we are now working with multiple continuous parameters, the denominator is represented by a complex integral instead of a summation.
+Where P(&theta;|D) is the posterior probability of the hypothesis, represented by &theta;. In phylogenetics, &theta; includes the topology and its associated branch lengths, and the substitution model parameters. Given that we are now working with multiple continuous parameters, the denominator is represented by a complex integral instead of a summation.
 
-P(&Theta) is the prior and P(D|&Theta) is the likelihood function, which you have seen applied in the ML method. An appropriate model (&Theta) needs to be selected to evaluate the likelihood function, and prior distributions need to be chosen for all the parameters in the model. Most often, uniform (flat) priors are used, which place equal weight on all parameter values. Branch length and substitution model parameters often use continuous distributions, such as the uniform or gamma probability distributions.
+P(&theta;) is the prior and P(D|&theta;) is the likelihood function, which you have seen applied in the ML method. An appropriate model (&theta;) needs to be selected to evaluate the likelihood function, and prior distributions need to be chosen for all the parameters in the model. Most often, uniform (flat) priors are used, which place equal weight on all parameter values. Branch length and substitution model parameters often use continuous distributions, such as the uniform or gamma probability distributions.
 
 Because of the complexity of Bayesian estimation using multiple models, it is not actually possible to estimate the denominator. To get around this, we commonly use the Markov Chain Monte Carlo random walk simulation method to obtain the estimate. This is described in a series of steps:
-1. The Markov chain starts at some state &Theta<sub>i</sub> (this could be the initial prior state)
-2. A new state, &Theta<sub>j</sub>, is proposed by taking a draw from a specified probability distribution. This is known as the proposal mechanism
+1. The Markov chain starts at some state &theta;<sub>i</sub> (this could be the initial prior state)
+2. A new state, &theta;<sub>j</sub>, is proposed by taking a draw from a specified probability distribution. This is known as the proposal mechanism
 3. The following formula, known as the acceptance ratio, is calculated:
 
 		 
-4. If R \geq 1 then &Theta<sub>j</sub> is accepted
+4. If R \geq 1 then &theta;<sub>j</sub> is accepted
 5. If R < 1 then a number is drawn from a uniform distribution (0,1)
-6. If this number is < R then &Theta<sub>j</sub> is accepted
+6. If this number is < R then &theta;<sub>j</sub> is accepted
 7. If this number is > R then the Markov chain stays in the same state
 
 The MCMC results in many trees of similar likelihood. As implement, Bayesian analyses summarize the relationships found on these trees. The posterior probability for each node is, in practice, representative of how often each relationship occurred in the collection of sampled trees. In principle, the initial trees are discarded (called the "burn-in"), with only the trees that have reached stationarity (convergence) being kept. Stationarity means that the likelihood of the trees stays within a very narrow range for a very long period of time. Multiple runs of Bayesian analyses are usually performed to verify that the best point of stationarity has been reached, because the MCMC algorithm is stochastic (random), and may get stuck in local likelihood peaks.
