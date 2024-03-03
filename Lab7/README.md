@@ -174,7 +174,7 @@ Log out of your shell and load the Web Desktop. Open RStudio and load the packag
 ```
 library(rwty)
 ```
-Change to your Lab7 directory with `setwd()`
+Change to your Lab7_bayes directory with `setwd()`
 
 Next, load in your MrBayes data with the command:
 ```
