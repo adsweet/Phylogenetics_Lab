@@ -31,10 +31,14 @@ R = \frac{P(&theta;_j)P(D|&theta;_j)}{P(&theta;_i)P(D|&theta;_i)}
 
 The MCMC results in many trees of similar likelihood. As implement, Bayesian analyses summarize the relationships found on these trees. The posterior probability for each node is, in practice, representative of how often each relationship occurred in the collection of sampled trees. In principle, the initial trees are discarded (called the "burn-in"), with only the trees that have reached stationarity (convergence) being kept. Stationarity means that the likelihood of the trees stays within a very narrow range for a very long period of time. Multiple runs of Bayesian analyses are usually performed to verify that the best point of stationarity has been reached, because the MCMC algorithm is stochastic (random), and may get stuck in local likelihood peaks.
 
-Today we will estimate relationships between gall wasps (Cynipidae) and their close relatives (superfamily Cynipoidea) using Bayes’ theorem and data from four genes (cytochrome oxidase I (_cox1_), elongation factor 1-alpha (_EF-1&alpha;_), longwave rhodopsin (LW _Rh_), and 28S ribosomal RNA (_28S_)) and morphology. Portions of this lab were adapted directly from Mike Alfaro’s exercise, which he designed for the Workshop in Applied Phylogenetics (2003, in Bodega Bay, CA).
+Today we will estimate relationships between gall wasps (Cynipidae) and their close relatives (superfamily Cynipoidea) using Bayes’ theorem and data from four genes (cytochrome oxidase I (_cox1_), elongation factor 1-alpha (_EF-1&alpha;_), longwave rhodopsin (LW _Rh_), and 28S ribosomal RNA (_28S_)) and morphology. This lab was adapted from Jim Whitfield and Sydney Cameron's systematics lab taught at the University of Illinois, portions of which were adapted directly from Mike Alfaro, which he designed for the Workshop in Applied Phylogenetics (2003, in Bodega Bay, CA).
 
+**Objectives**
 
- 
+In this lab you will:
+- Be introduced running Bayesian phylogenetic analyses
+- Be introduced to assessing MCMC runs using R and other tools
+
 Laboratory Exercise 1
 
 Log on to Jetstream and launch the Web Shell on your VM.
