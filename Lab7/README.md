@@ -8,7 +8,7 @@ The idea that we could infer phylogenies by implementing Bayes' theorem was intr
 Where did Bayes' theorem come from? Rev. Thomas Bayes was a minister in southern England during the 1700s, and after he retired from the church he focused his efforts on probability theory. In 1763 he developed his famous theorem, above. This has been adapted to phylogenetic inference with the following equation:
 
  ```math
-P(\theta|D) = \frac{P(D|\theta)P(\theta)}{\intP(\theta)P(D|\theta)d\theta
+P(\theta|D) = \frac{P(D|\theta)P(\theta)}{\intP(\theta)P(D|\theta)d\theta}
 ```
 
 Where P(&theta;|D) is the posterior probability of the hypothesis, represented by &theta;. In phylogenetics, &theta; includes the topology and its associated branch lengths, and the substitution model parameters. Given that we are now working with multiple continuous parameters, the denominator is represented by a complex integral instead of a summation.
