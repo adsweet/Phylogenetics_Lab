@@ -219,39 +219,44 @@ Open "gall_wasp.nex.con.tre" in FigTree, root on "Ibalia", turn on Branch Labels
 
 ### Exercise 7.2
 
-We just completed an analysis where all the molecular and morphological characters were treated with the equivalent of the Jukes-Cantor model (the default model). Now let’s make our models and analyses a little more sophisticated. If we ran our genetic data through ModelFinder in IQ-TREE. Unlike IQ-TREE, MrBayes does not automatically implement model and partition testing. As a reminder, you can run ModelFinder using the -m MF option in IQ-TREE. However, since MrBayes only implements a few models, so when using ModelFinder to test models for MrBayes, you should set it to only test models available in MrBayes by providing the argument -mset mrbayes. 
+We just completed an analysis where all the molecular and morphological characters were treated with the equivalent of the Jukes-Cantor model (the default model). Now let’s make our models and analyses a little more sophisticated. Unlike IQ-TREE, MrBayes does not automatically implement model and partition testing. As a reminder, you can run ModelFinder using the `-m MF` option in IQ-TREE. However, MrBayes only implements a few models, so when using ModelFinder to test models for MrBayes, you should set it to only test models available in MrBayes by providing the argument `-mset mrbayes`. 
 
-Let’s say we ran ModelFinder and found that the general time reversible (GTR) model with a proportion of the sites invariable (I), and the rate for the remaining sites are drawn from a gamma distribution [G], referred to in MrBayes as invgamma, fits our COI, EF1a, and 28S datasets (GTR+I+G model).  The HKY + G model fits the LW Rh data better. It can be hard to remember how to set models, follow this guide: https://gist.github.com/brantfaircloth/895282
+Let’s say we ran ModelFinder and found that the general time reversible (GTR) model with a proportion of the sites invariable (I), and the rate for the remaining sites are drawn from a gamma distribution [G], referred to in MrBayes as invgamma, fits our _cox1_, _EF-1&alpha;_, and _28S_ datasets (GTR+I+G model).  The HKY + G model fits the LW _Rh_ data better. It can be hard to remember how to set models, but this guide is helpful: https://gist.github.com/brantfaircloth/895282
 
-To set up the model, we can modify the Bayes block again. Make a copy of gall_wasp.nex file called gall_wasp2.nex. 
-
+To set up the model, we can modify the Bayes block again. Make a copy of the gall_wasp.nex file called gall_wasp2.nex:
+```
 cp gall_wasp.nex gall_wasp2.nex
+```
 
-Make a new directory called “gall_wasp2” and move your new NEXUS file into this directory.
+Make a new directory called “gall_wasp2” and move gall_wasp2.nex file into this directory.
 
-Download the gall_wasp2.nex file and open it in a text editor. Delete the line
+Download the gall_wasp2.nex file and open it in a text editor. Delete the line:
 
+```
 set partition=default
+```
 
 and in place of that type in (or copy/paste) the following new command block. It should appear before the mcmcp command:
-
+```
 set partition=data;
 ctype ordered: 1 3 5;
 lset applyto=(2,3,5) nst=6 rates=invgamma;
 lset applyto=(4) nst=2 rates=gamma;
 unlink shape=(all) pinvar=(all) statefreq=(all) revmat=(all);
+```
 
-First, we set up the partition called “data” (it’s defined in the first MrBayes block) using the set command. We forced characters 1, 3, and 5 to be ordered using the ctype command. Then we used the lset command to assign likelihood models to each molecular character set. This is done using applyto and specifying the number of the charset in the order in which it is listed in the partition “data” (e.g. COI is partition 2, EF1a is partition 3, etc.). The unlink command allows each character set to have its own parameters, free from other character sets, by specifying all partitions. Use the help unlink command to learn more. After this, your MrBayes block should then say mcmcp to prepare the MCMC parameters. In addition, for now, delete the mcmc command. After adding the command block above, save the file and upload to your Lab7/gall_wasp2 folder.
+First, we set up the partition called “data” (it’s defined in the first MrBayes block) using the set command. We forced characters 1, 3, and 5 to be ordered using the `ctype` command. Then we used the `lset` command to assign likelihood models to each molecular character set. This is done using `applyto` and specifying the character set in the order in which they are listed in the partition “data” (e.g. _cox1_ is partition 2, _EF-1&alpha_; is partition 3, etc.). The `unlink` command allows each character set to have its own parameters, free from other character sets, by specifying `all` partitions. Use the `help unlink` command to learn more. 
+
+Remember, your file should still have the `mcmcp` command with the MCMC parameters. For now, delete the `mcmc` command. After making these edits, save the file and upload to your `gall_wasp2` folder.
 
 Let’s check that all parameters were set correctly. Start up MrBayes in interactive mode:
-
+```
 mb
-
+```
 Then, execute the new file:
-
-MrBayes > execute gall_wasp2.nex
-
-Note that the output lists all parameters that you input into your file. It is a good idea to check this output to see if your file was read correctly. For example, if you did not specify a parameter correctly, it is possible the program may use the defaults. Theoretically, you could run mcmc from here, but this would be bad on LAS as you would all be running this command from the login node. Let’s submit it to SLURM in non-interactive mode. Go ahead and quit interactive mode.
+```
+execute gall_wasp2.nex
+```
 
 Once again, add mcmc; (don’t forget the semicolon!) after mcmcp and before the end of the MrBayes block. The mcmc command can also be input in lieu of mcmcp in the mcmcp line of your Bayes block. Reattach to your screen:
 
