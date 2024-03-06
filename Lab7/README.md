@@ -98,6 +98,13 @@ To start the Markov chain (i.e., start your analysis) use the mcmc command:
 ```
 mcmc 
 ```
+
+If you get an error about OpenCL, run this command in MrBayes and re-run `mcmc`:
+
+```
+set usebeagle=no
+```
+
 Every 10th generation will be printed to the screen. In the MrBayes window you will see a summary of the chain conditions. The screen will be updated with six columns that track the status of the Markov chain. The first column shows the current generation number. The next four columns show the log likelihoods of each chain’s tree. This is technically a Metropolis-Coupled MCMC, so there is one cold chain and three hot chains. The hot chains move more rapidly through parameter space, allowing the MCMC to better escape local optima. Notice that one of the columns is surrounded by square brackets. This is the cold chain, the chain that is actually being recorded to the out file. Note that the square brackets move around between chains. This indicates that a search of tree space by a heated chain yielded a more likely tree topology and this heated chain subsequently became the new cold chain. The last column is the estimated time left in the analysis. When the analysis is finished, MrBayes asks you if you want to continue – type `n` and hit Enter.  
 
 Now exit the interactive MrBayes program.
