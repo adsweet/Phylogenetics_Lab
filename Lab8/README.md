@@ -54,7 +54,7 @@ After getting your raw FASTQ files, you generally want to trim the reads to remo
 Run the following command to use Trimmomatic (the command should be on a single line when you copy it to the shell):
 
 ```
-trimmomatic PE -phred33 -basein Ibidoecus_1.fastq -baseout Ibidoecus.fastq ILLUMINACLIP:TruSeq2-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:75
+fastp --in1 Ibidoecus_1.fastq --in2 Ibidoecus_2.fastq --out1 Ibidoecus_1P.fastq --out2 Ibidoecus_2P.fastq --adapter_fasta TruSeq2-PE.fa --cut_front --cut_tail --length_required 75
 ```
 
 This command will trim paired-end data (PE) by removing the adapters indicated in the file `TruSeq2-PE.fa`, remove bases below a PHRED score of 3 from the 5’ (LEADING) and 3’ (TRAILING) ends of each read, remove chunks of 4 base pair-long regions that have an average PHRED score below 15, and remove any reads less than 75 base pairs after the trimming steps. Download and open the `TruSeq2-PE.fa` file in a text editor to view the adapters and other sequences that wil be trimmed from the reads.
