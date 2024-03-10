@@ -128,6 +128,8 @@ This will use the program Trimal to remove sites that have gaps (gt = gap thresh
 
 :white_check_mark: __Were any sequences removed because they only contained gaps?__
 
+:white_check_mark: __Do you think running a trimming step helped to improve the alignment?__
+
 Trimal also has several automated methods for selecting filtering parameters. Let’s try filtering again with the “automated1” option, which determines and applies the most appropriate automatic method:
 
 ```
@@ -137,6 +139,16 @@ done
 ```
 
 Ignore any error messages that print to your screen.
+
+If really want to get rid of eror message, run the following command to remove all lower case "n" and replace them with uppercase "N":
+
+```
+sed -i 's/n/N/g' *aligned.fasta
+```
+
+`sed` (short for "Stream Editor") is a built-in command to find and replace patterns in files. Using the `-i` flag means to edit "in place." Be careful how you use this command, because it will overwrite existing files.
+
+Once you've run `sed`, go ahead and rerun the `trimal` loop with the `-automated1` option. 
 
 :white_check_mark: __How do the 50% threshold and automated filter alignments compare to each other?__
 
