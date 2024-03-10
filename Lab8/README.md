@@ -157,7 +157,7 @@ mv concatenated.out hemipteroid_concat.fasta
 mv partitions.txt hemipteroid_concat_partitions.txt
 ```
 
-The partitioned analysis will take too long to finish in lab, but we’ll want a concatenated tree for next week’s lab. Open new a screen:
+The partitioned analysis will take too long to finish in lab, but we’ll want a concatenated tree for next week’s lab. Open a new screen:
 
 ```
 screen -S iqtree
@@ -171,4 +171,4 @@ iqtree -s hemipteroid_concat.fasta -p hemipteroid_concat_partitions.txt -m MFP+M
 
 :white_check_mark: __Briefly describe what you see on the screen.__
 
-Detach from your screen (`CTRL+a d`; remember to life up `CTRL+a` before pressing `d`)  We’ll see how the tree looks next week!
+Detach from your screen (`CTRL+a d`; remember to lift up `CTRL+a` before pressing `d`)  We’ll see how the tree looks next week!
