@@ -115,9 +115,9 @@ done
 
 This will use the program Trimal to remove sites that have gaps (gt = gap threshold) in 50% or more of the taxa. Download a trimmed alignment and open it in SeaView.
 
-:white_check_mark: ___How much shorter is the trimmed alignment than the untrimmed alignment?___
+:white_check_mark: __How much shorter is the trimmed alignment than the untrimmed alignment?__
 
-:white_check_mark: ___Were any sequences removed because they only contained gaps?___
+:white_check_mark: __Were any sequences removed because they only contained gaps?__
 
 Trimal also has several automated methods for selecting filtering parameters. Let’s try filtering again with the “automated1” option, which determines and applies the most appropriate automatic method:
 
@@ -127,7 +127,9 @@ for file in *.aligned.fasta;do
 done
 ```
 
-:white_check_mark: ___How do the 50% threshold and automated filter alignments compare to each other?___
+Ignore any error messages that print to your screen.
+
+:white_check_mark: __How do the 50% threshold and automated filter alignments compare to each other?__
 
 ### Phylogenomic analysis
 
