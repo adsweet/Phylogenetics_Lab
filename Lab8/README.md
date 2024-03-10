@@ -144,7 +144,7 @@ Ignore any error messages that print to your screen.
 
 Once you have trimmed your alignments, you are finally ready to run a phylogenetic estimation with your data. We’ll run a partitioned concatenated alignment, so we’ll need to concatenate all of our trimmed alignment files and generate a partition file.
 
-First, make a new directory called `concat` and copy all of your filtered alignment files to this new directory. You can choose either the 50% or automatically trimmed alignments. __Change into the concat directory__ and run the following command to concatenate your alignments and obtain a partition file:
+First, make a new directory called `concat` and copy all of your filtered alignment files to this new directory. You can choose either the 50% or automatically trimmed alignments. __Change into the `concat` directory__ and run the following command to concatenate your alignments and obtain a partition file:
 
 ```
 amas concat -f fasta -i *.fasta -d dna -u fasta --part-format raxml
