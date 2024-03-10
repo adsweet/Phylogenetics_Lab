@@ -17,8 +17,7 @@ Today, we will briefly introduce you to the data involved with phylogenomic anal
 
 There are several technologies for generating genomic-level data sets, but the most frequently used is the “short read” technology from Illumina. With Illumina sequencing, the genome is fragmented into many little pieces (usually 400-500 base pairs), specific adapters are added to the ends of these fragments, and ~150 base pairs are sequenced from each end of the fragment. This can be done for a specific region of the genome (e.g., mitochondrial genome, 16S gene, conserved nuclear genes, restriction-site associated regions) or for the entire genome (whole genome shotgun sequencing). The result is a file or files with millions of ~100-160 base pair fragments that together makeup the whole genome or targeted region(s). You would then assemble these short “reads” by themselves (de novo assembly) or map them to a closely related reference to obtain your data for phylogenetic analysis.[^2]  
 
-[^2]: We won’t cover assembly or mapping in this lab, but here are some examples of programs that do this: De novo: SPAdes, ABySS, Trinity; Mapping: Bowtie2, BWA.![image](https://github.com/adsweet/Phylogenetics_Lab/assets/7799421/56ae1c8f-6d79-49e2-bb14-a5fa08c0e80f)
-
+[^2]: We won’t cover assembly or mapping in this lab, but here are some examples of programs that do this: __De novo:__ SPAdes, ABySS, Trinity; __Mapping:__ Bowtie2, BWA.
 
 Let’s look at some data that was generated from genomic sequencing. First, log on to your Jetstream instance and launch the Web Shell. Navigate to your volume or home directory and create a directory called `Lab8_phylogenomics`.
 
