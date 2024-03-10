@@ -66,7 +66,7 @@ fastp --in1 Ibidoecus_1.fastq --in2 Ibidoecus_2.fastq --out1 Ibidoecus_1P.fastq 
 
 This command will trim paired-end data by removing the adapters indicated in the file `TruSeq2-PE.fa`, remove remove chunks of 4 base pair-long regions from the 5' and 3' ends of reads that have an average PHRED score below 20 (`cut_front` and `cut_tail`), remove any reads less than 75 base pairs after the trimming steps, and remove duplicate reads (`dedup`). By default, fastp also removes any reads with mean quality scores <15 and trims regions with high amounts of Gs from the 3' ends ("polyG regions"), which can be common with some types of sequencing. Download and open the `TruSeq2-PE.fa` file in a text editor to view the adapters and other sequences that wil be trimmed from the reads.
 
-After running Trimmomatic, you should see four new files ending in `P.fastq` and `U.fastq`. These are the trimmed paired (P) and unpaired (U) reads. Download one of the trimmed paired read files and open it in a text editor.
+After running fastp, you should see two new files ending in `P.fastq`. These are the trimmed paired reads. Any unpaired reads were discarded. Download one of the trimmed paired read files and open it in a text editor.
 
 :white_check_mark: __Do you notice any differences between the trimmed and untrimmed file? Are all the reads the same length?__
 
