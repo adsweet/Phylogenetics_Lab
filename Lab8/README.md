@@ -9,7 +9,14 @@ Large data sets can be very useful for estimating a well-resolved phylogeny. How
 
 [^1]: There are “targeted” genomic approaches that use baits to sequence specific, conserved regions of a genome, but these are still based on a reference genome. Two examples are Anchored Hybrid Enrichment (AHE) and Ultraconserved Elements (UCEs).
 
-Today, we will briefly introduce you to the data involved with phylogenomic analyses and cover a few approaches for analyzing and filtering large datasets.
+Today, we will briefly introduce you to the data involved with phylogenomic analyses and cover a few approaches for analyzing and filtering large datasets. Be aware that there are many ways to work with large data sets for phylogenetic analysis. Today's lab covers one approach.
+
+__Objectives__
+
+In this lab, you will:
+
+1. Learn the basic structure of genomic data files.
+2. Learn one pipeline for aligning, filtering, and analyzing genomic data for phylogenetic analysis.
 
 ### Exercise 8.1 
 
@@ -56,9 +63,11 @@ This command lists the files ending in .fastq and “pipes” (`|`) the output o
 
 ### Trimming genomic data
 
-After getting your raw FASTQ files, you generally want to trim the reads to remove adapters added for the sequencing process (and thus do not represent actual sequence from your organism) and remove bases that might have particularly low quality. There are several programs for trimming FASTQ files, but we will use Trimmomatic. 
+After getting your raw FASTQ files, you generally want to trim the reads to remove adapters added for the sequencing process (and thus do not represent actual sequence from your organism) and remove bases that might have particularly low quality. There are several programs for trimming FASTQ files[^5], but we will use `[fastp](https://github.com/OpenGene/fastp)`. 
 
-Run the following command to use [fastp](https://github.com/OpenGene/fastp):
+[^5]: Some other popular trimming software are [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) and [BBDuk](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbduk-guide/) from the BBTools suite of software.
+
+Run the following command to use fastp:
 
 ```
 fastp --in1 Ibidoecus_1.fastq --in2 Ibidoecus_2.fastq --out1 Ibidoecus_1P.fastq --out2 Ibidoecus_2P.fastq --adapter_fasta TruSeq2-PE.fa --cut_front --cut_tail --length_required 75 --dedup
@@ -110,9 +119,9 @@ We will be using for loops in future labs as well; they are very useful for work
 
 ### Filtering alignments
 
-It’s still feasible to check five alignment files by-eye, but you can imagine it gets very difficult if you’re working with hundreds or thousands of files. One way to run a quality check on your alignments is to filter them using some criteria. There are several programs you can use to trim based on alignment scores or gaps, but today we will use the program [Trimal](http://trimal.cgenomics.org/).  We will keep it simple today and trim alignments based on the proportion of gaps at a particular site.[^5]
+It’s still feasible to check five alignment files by-eye, but you can imagine it gets very difficult if you’re working with hundreds or thousands of files. One way to run a quality check on your alignments is to filter them using some criteria. There are several programs you can use to trim based on alignment scores or gaps, but today we will use the program [Trimal](http://trimal.cgenomics.org/).  We will keep it simple today and trim alignments based on the proportion of gaps at a particular site[^6].
 
-[^5]: Although many phylogenomic studies use proportion of gaps to trim their alignments.
+[^6]: Although many phylogenomic studies use proportion of gaps to trim their alignments.
 
 To trim your alignments, run the following command:
 
