@@ -157,9 +157,9 @@ screen -S iqtree
 and run the following command:
 
 ```
-iqtree -s hemipteroid_concat.fasta -p partition.txt -m MFP+MERGE -B 1000 -pre hemipteroid_concat
+iqtree -s hemipteroid_concat.fasta -p hemipteroid_concat_partitions.txt -m MFP+MERGE -B 1000 -pre hemipteroid_concat
 ```
 
 :white_check_mark: __Briefly describe what you see on the screen.__
 
-Detach from your screen (CTRL+a d). We’ll see how the tree looks next week!
+Detach from your screen (`CTRL+a d`). We’ll see how the tree looks next week!
