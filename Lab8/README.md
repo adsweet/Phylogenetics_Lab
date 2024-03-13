@@ -63,7 +63,7 @@ This command lists the files ending in .fastq and “pipes” (`|`) the output o
 
 ### Trimming genomic data
 
-After getting your raw FASTQ files, you generally want to trim the reads to remove adapters added for the sequencing process (and thus do not represent actual sequence from your organism) and remove bases that might have particularly low quality. There are several programs for trimming FASTQ files[^5], but we will use `[fastp](https://github.com/OpenGene/fastp)`. 
+After getting your raw FASTQ files, you generally want to trim the reads to remove adapters added for the sequencing process (and thus do not represent actual sequence from your organism) and remove bases that might have particularly low quality. There are several programs for trimming FASTQ files[^5], but we will use [fastp](https://github.com/OpenGene/fastp). 
 
 [^5]: Some other popular trimming software are [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) and [BBDuk](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbduk-guide/) from the BBTools suite of software.
 
