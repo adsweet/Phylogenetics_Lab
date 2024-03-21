@@ -118,7 +118,7 @@ It could be that your group of interest does not evolve in a tree-like manner. F
 
 __SplitsTree__
 
-Let’s make a network using the program SplitsTree . Find the program icon on the desktop and click to open. You should see a screen like this:
+Let’s make a network using the program [SplitsTree](https://uni-tuebingen.de/en/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/algorithms-in-bioinformatics/software/splitstree/). Find the program icon on the desktop and click to open. You should see a screen like this:
 
 <img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/lab9_splitstree.png" width=50% height=50%>
 
@@ -137,9 +137,9 @@ Next, create an NJ tree in SplitsTree by going to Trees → BioNJ. A window will
 
 __PhyloNet__
 
-Another approach to producing phylogenetic networks is to use gene trees for estimating introgression while simultaneously accounting for ILS. To do this, we will use the pseudo-maximum likelihood approach in the program PhyloNet .
+Another approach to producing phylogenetic networks is to use gene trees for estimating introgression while simultaneously accounting for ILS. To do this, we will use the pseudo-maximum likelihood approach in the program [PhyloNet](https://phylogenomics.rice.edu/).
 
-Download the file yeast_trees.nex and open it in a text editor. You should notice this is a NEXUS file that contains several gene trees and commands in a “PhyloNet block” at the end of the file. The gene trees are from several species of yeast .
+Download the file yeast_trees.nex and open it in a text editor. You should notice this is a NEXUS file that contains several gene trees and commands in a “PhyloNet block” at the end of the file. The gene trees are from several species of yeast.
 
 :white_check_mark: __What commands are in the PhyloNet block?__
 
@@ -149,7 +149,9 @@ Run PhyloNet from the Web Shell using the command:
 phylonet yeast_trees.nex
 ```
 
-When the program finishes running, you should see five inferred networks. Copy the Newick format after the first “Visualize in Dendroscope.” Open the program Dendroscope  from your desktop and paste in this Newick tree (CTRL+v should work). NOTE: IF YOU CANNOT FIND DENDROSCOPE, I HAVE PROVIDED A PNG FILE OF THE TREE IN YOUR DATA FOLDER. DOWNLOAD THIS FILE AND OPEN IT TO VIEW.
+When the program finishes running, you should see five inferred networks. Copy the Newick format after the first “Visualize in Dendroscope.” Open the program [Dendroscope](https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/algorithms-in-bioinformatics/software/dendroscope/) from your desktop and paste in this Newick tree (CTRL+v should work). Like FigTree, Dendroscope is a program for viewing phylogenies. However, FigTree is not able to show reticulations. 
+
+NOTE: IF YOU CANNOT FIND DENDROSCOPE, I HAVE PROVIDED A PNG FILE OF THE TREE IN YOUR DATA FOLDER. DOWNLOAD THIS FILE AND OPEN IT TO VIEW.
 
 :white_check_mark: __Export/save the file as LastName_phylonet.pdf.__
 
