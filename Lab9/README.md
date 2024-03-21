@@ -131,7 +131,7 @@ Download the file `symbiont.nex` from Jetstream and open it in SplitsTree (File 
 
 :white_check_mark: __What do you think it means if certain relationships are highly reticulated (have many lines connecting them)?__
 
-Next, create an NJ tree in SplitsTree by going to Trees → BioNJ. A window will pop up; hit “Apply.” 
+Next, create a NJ tree in SplitsTree by going to Trees → BioNJ. A window will pop up; hit “Apply.” 
 
 :white_check_mark: __How does the NJ tree compare to the NeighborNet network?__
 
@@ -155,4 +155,4 @@ NOTE: IF YOU CANNOT FIND DENDROSCOPE, I HAVE PROVIDED A PNG FILE OF THE TREE IN 
 
 :white_check_mark: __Export/save the file as LastName_phylonet.pdf.__
 
-:white_check_mark: __What do you notice about this phylogeny? What does the blue/arrow line indicate?__
+:white_check_mark: __What do you notice about this phylogeny? What do the blue/arrow lines indicate?__
