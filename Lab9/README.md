@@ -149,7 +149,7 @@ Run PhyloNet from the Web Shell using the command:
 phylonet yeast_trees.nexus
 ```
 
-When the program finishes running, you should see five inferred networks. Copy the Newick format after the first “Visualize in Dendroscope.” Open the program [Dendroscope](https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/algorithms-in-bioinformatics/software/dendroscope/) from your desktop and paste in this Newick tree (CTRL+v should work). Like FigTree, Dendroscope is a program for viewing phylogenies. However, FigTree is not able to show reticulations. 
+When the program finishes running, you should see five inferred networks printed to the shell screen ("Inferred Network #1", etc.). To visualize one of the networks, copy the Newick format printed after “Visualize in Dendroscope” under `Inferred Network #1`. Open the program [Dendroscope](https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/algorithms-in-bioinformatics/software/dendroscope/) from your desktop and paste in this tree (CTRL+v should work). Like FigTree, Dendroscope is a program for viewing phylogenies. However, FigTree is not able to show reticulations. 
 
 NOTE: IF YOU CANNOT FIND DENDROSCOPE, I HAVE PROVIDED A PNG FILE OF THE TREE IN YOUR DATA FOLDER. DOWNLOAD THIS FILE AND OPEN IT TO VIEW.
 
