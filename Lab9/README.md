@@ -145,7 +145,7 @@ Download the file yeast_trees.nex and open it in a text editor. You should notic
 
 Use the following resource for a description of the commands: https://wiki.rice.edu/confluence/display/PHYLONET/InferNetwork_MPL
 
-:white_check_mark: __Give a brief summary of what the commands in teh PhyloNet block are specifying.__
+:white_check_mark: __Give a brief summary of what the commands in the PhyloNet block are specifying.__
 
 Run PhyloNet from the Web Shell using the command:
 
