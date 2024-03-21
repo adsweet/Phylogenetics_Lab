@@ -155,4 +155,4 @@ NOTE: IF YOU CANNOT FIND DENDROSCOPE, I HAVE PROVIDED A PNG FILE OF THE TREE IN 
 
 :white_check_mark: __Export/save the file as LastName_phylonet.pdf.__
 
-:white_check_mark: __What do you notice about this phylogeny? What does the red line indicate?__
+:white_check_mark: __What do you notice about this phylogeny? What does the blue/arrow line indicate?__
