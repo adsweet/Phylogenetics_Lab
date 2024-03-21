@@ -139,9 +139,13 @@ __PhyloNet__
 
 Another approach to producing phylogenetic networks is to use gene trees for estimating introgression while simultaneously accounting for ILS. To do this, we will use the pseudo-maximum likelihood approach in the program [PhyloNet](https://phylogenomics.rice.edu/).
 
-Download the file yeast_trees.nex and open it in a text editor. You should notice this is a NEXUS file that contains several gene trees and commands in a “PhyloNet block” at the end of the file. The gene trees are from several species of yeast.
+Download the file yeast_trees.nex and open it in a text editor. You should notice this is a NEXUS file that contains several gene trees and commands in a “PhyloNet block” at the end of the file. The gene trees are from several species of yeast and are from a [PhyloNet tutorial](https://wiki.rice.edu/confluence/pages/viewpage.action?pageId=8898533) from Rice University.
 
 :white_check_mark: __What commands are in the PhyloNet block?__
+
+Use the following resource for a description of the commands: https://wiki.rice.edu/confluence/display/PHYLONET/InferNetwork_MPL
+
+:white_check_mark: __Give a brief summary of what the commands in teh PhyloNet block are specifying.__
 
 Run PhyloNet from the Web Shell using the command:
 
