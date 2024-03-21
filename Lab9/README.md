@@ -120,7 +120,7 @@ __SplitsTree__
 
 Let’s make a network using the program SplitsTree . Find the program icon on the desktop and click to open. You should see a screen like this:
 
-
+<img src="https://github.com/adsweet/Phylogenetics_Lab/blob/main/Images/lab9_splitstree.png" width=50% height=50%>
 
 
 Download the file `symbiont.nex` from Jetstream and open it in SplitsTree (File → Open). This is an alignment of several genes from various genera of bacteria, including free-living (such as _E. coli_) and endosymbionts of insects (including _Sodalis_ spp.). You should immediately see an image pop up on your screen. This is produced from a NeighborNet algorithm, which is based on Neighbor Joining, but shows conflicts/alternative branching patterns rather than a strictly bifurcating tree. These alternatives are shown as reticulations. 
