@@ -84,7 +84,7 @@ __SVDquartets__
 
 Another coalescent approach is to use each site of an alignment to estimate a species tree. This type of analysis is particularly useful for SNP data. We will run this analysis using [SVDquartets](https://www.asc.ohio-state.edu/kubatko.2/software/SVDquartets/), which is implemented in PAUP*.
 
-Download the file fernandez.nex and open it in a text editor. These are SNP data from a clade of flowering plants in the genus _Linaria_, and come from [Fernandez-Mazuecos et al. (2018)](https://academic.oup.com/sysbio/article/67/2/250/3953673).
+Download the file `fernandez.nex` and open it in a text editor. These are SNP data from a clade of flowering plants in the genus _Linaria_, and come from [Fernandez-Mazuecos et al. (2018)](https://academic.oup.com/sysbio/article/67/2/250/3953673).
 
 :white_check_mark: __Briefly describe the structure and content of this file.__
 
@@ -103,7 +103,7 @@ There is no specific outgroup in this data set, so either root on the ALGI group
 Let’s also run an ML analysis on all the data. Run IQ-Tree with the following command:
 
 ```
-iqtree -s fernandez_trim_variable.nex -m GTR+ASC -B 1000
+iqtree -s fernandez.nex -m GTR+ASC -B 1000
 ```
 
 The “ASC” addition to the GTR model is accounting for Ascertainment Bias, which you need to run with SNP data to avoid overestimating branch lengths and biasing the tree.
