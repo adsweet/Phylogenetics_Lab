@@ -43,7 +43,7 @@ Navigate to your volume or home directory and create a directory called `Lab9_ge
 First, let’s run a concatenated analysis. We’ll just run an unpartitioned analysis. I also suggest running this analysis in a screen so you can work on other things. If you’re not still attached to the iqtree screen, reattach with `screen -r iqtree`. Start an IQ-Tree analysis using the following command:
 
 ```
-iqtree -s Tilic_concat.fasta -m WAG -bb 1000
+iqtree -s Tilic_concat.fasta -m WAG -B 1000
 ```
 
 Because these data are amino acids, we need to use an amino acid substitution model (the WAG model). After launching your IQ-Tree run, detach from your screen (`CTRL+a d`). The analysis will likely take too long to complete during lab, so I’ve provided a finished tree file in your data folder (“Tilic_concat.tre”). 
@@ -54,7 +54,7 @@ While the concatenated analysis is running, let’s move on to the species tree 
 
 ```
 for gene in *.fasta;do
-	iqtree -s $gene -m MFP -bb 1000;
+	iqtree -s $gene -m MFP -B 1000;
 done
 ```
 
@@ -103,7 +103,7 @@ There is no specific outgroup in this data set, so either root on the ALGI group
 Let’s also run an ML analysis on all the data. Run IQ-Tree with the following command:
 
 ```
-iqtree -s fernandez_trim_variable.nex -m GTR+ASC -bb 1000
+iqtree -s fernandez_trim_variable.nex -m GTR+ASC -B 1000
 ```
 
 The “ASC” addition to the GTR model is accounting for Ascertainment Bias, which you need to run with SNP data to avoid overestimating branch lengths and biasing the tree.
