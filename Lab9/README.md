@@ -1,4 +1,4 @@
-# Laboratory 8
+# Laboratory 9
 ## Gene Trees and Networks
 
 ### Introduction 
