@@ -94,7 +94,7 @@ Next, launch PAUP* and load/execute the NEXUS file.
 
 Go to Analysis → SVDquartets
 
-Set the number of quartets to exhaustive, select the bootstrap option, and select the bootstrapping option (default of 100 bootstrap replicated). 
+Set the number of quartets to exhaustive, select the bootstrap option, and select the bootstrapping option (default of 100 bootstrap replicates). 
 
 :white_check_mark: __Save the resulting majority-rule consensus tree as LastName_svd.pdf by using the Print Tree option in View trees, or by writing the tree to a .tre file and opening/saving in FigTree (remember to show the bootstrap values!).__ 
 
